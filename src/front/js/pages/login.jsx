@@ -35,6 +35,31 @@ export const Login = () => {
                 />
               </div>
 
+              <div className="input-group input-group-lg">
+                <span className="input-group-addon">
+                  <i className=""></i>
+                </span>
+                <input
+                  type="radio"
+                  name="tipo"
+                  id="tutor"
+                  value="tutor"
+                  className="p-1 m-2"
+                />
+
+                <label htmlFor="tutor">Tutor</label>
+
+                <input
+                  type="radio"
+                  name="tipo"
+                  id="student"
+                  value="student"
+                  className="p-1 m-2"
+                />
+
+                <label htmlFor="student">Student</label>
+              </div>
+
               <button type="submit" className="btn btn-primary">
                 Login
               </button>

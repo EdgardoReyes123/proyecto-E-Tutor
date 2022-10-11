@@ -5,17 +5,17 @@ export const Navbar = () => {
   return (
     <div>
       <ul className="nav bg-light py-2">
-        <li class="nav-item">
+        <li className="nav-item">
           <Link to="/home">
             <span className="navbar-brand mb-0 h1">Home</span>
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link to="/login">
             <span className="navbar-brand mb-0 h1">Login</span>
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link to="/register">
             <span className="navbar-brand mb-0 h1">Register</span>
           </Link>
