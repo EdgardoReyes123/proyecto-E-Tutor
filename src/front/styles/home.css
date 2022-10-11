@@ -35,3 +35,42 @@
     justify-content: center;
     transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+
+.classes{
+    border: 1px solid #dbdada;
+    height: 570px;
+    width: 450px;
+    padding: 0%;
+    border-radius: 10px;
+}
+
+.title{
+    /* border: 1px solid red; */
+    height: 25px;
+    min-width: 470px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 10px;
+
+    /* width: 480px; */
+}
+
+.boxTitle{
+    border-bottom: 1px solid #dbdada;
+    margin-top: 0%;
+    border-top: 1px ;
+    height: 30px;
+}
+
+.tarjeta{
+    margin: 4px, 4px;
+    padding: 30px;
+
+}
+
+.imgCard {
+    width: 286px;
+    height: 320px;
+}

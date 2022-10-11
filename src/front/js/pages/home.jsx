@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import Navbar from "../component/Navbar.jsx";
 import FirstHeading from "../component/FirstHeading.jsx";
+import UpcommingsClasses from "../component/UpcommingsClasses.jsx";
 // import Container from "./Container.jsx";
 // import Footer from "./Footer.jsx";
 
@@ -12,9 +13,8 @@ export const Home = () => {
 
   return (
     <div className="container-fluid p-0">
-      {/* <Navbar /> */}
       <FirstHeading />
-      {/* <Footer /> */}
+      <UpcommingsClasses />
     </div>
   );
 };
