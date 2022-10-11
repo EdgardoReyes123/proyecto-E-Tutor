@@ -74,3 +74,19 @@
     width: 286px;
     height: 320px;
 }
+
+.comments{
+    border: 1px solid #dbdada;
+    height: 570px;
+    width: 580px;
+    padding: 0%;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.comment-item{
+    height: 100px;
+    min-width: 500px;
+    border: 1px solid red;
+    margin-top: 20px;
+}

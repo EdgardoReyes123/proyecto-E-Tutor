@@ -17,12 +17,14 @@ const UpcommingsClasses = () => {
                         <UpcommingClassesCard/>
                     </div>
                 </div>
-                <div className="col-4">
-                    <p style={{ fontSize: "18px" }}> Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                        id ligula porta felis euismod semper. Praesent commodo cursus magna,
-                        vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-                    </p>
-                    {/* <img src="../website/assets/img/1.jpg" class="rounded-circle mw-100" alt="keyboard"> */}
+                <div className="col-md-4 comments">
+                    <div className="boxTitle">
+                        <h2 className="title">Upcomming Classes...</h2>
+                    </div>
+                    <div className="tarjeta">
+                        <div className="comment-item"></div>
+                        <div className="comment-item"></div>
+                    </div>
                 </div>
         </div>
     </div>
