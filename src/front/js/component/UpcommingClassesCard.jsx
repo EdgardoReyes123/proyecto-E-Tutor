@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import img from "/workspace/proyecto-E-Tutor/src/front/img/rigo-baby.jpg";
 
-function UpcommingClassesCard() {
-    // const [favorites, setFavorites] = useEffect([])
+function UpcommingClassesCard({ detail, id, type }) {
     const navigate = useNavigate();
     const {actions, store} = useContext(Context);
 
@@ -14,12 +13,12 @@ function UpcommingClassesCard() {
     <Card style={{ width: '18rem', display: 'inline-block' }}>
       <Card.Img className="imgCard" 
         variant="top" 
-        src={`https://starwars-visualguide.com/assets/img/characters/3.jpg`}
+        src={`https://starwars-visualguide.com/assets/img/${type == "people" ? "characters" : type}/${type == "people" ? id : (id+1)}.jpg`}
       />
       <Card.Body>
-        <Card.Title>Ejemplo</Card.Title>
+        <Card.Title>{detail.name}</Card.Title>
         <Card.Text>
-          Height: 170
+          Height: {detail.height}
         </Card.Text>
         <Button variant="outline-warning" onClick={() => navigate(`/${type}/${id}`)}>
             Learn More!
