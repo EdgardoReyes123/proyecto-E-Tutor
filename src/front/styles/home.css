@@ -5,9 +5,16 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+.first{
+    /* background-image: url(https://t4.ftcdn.net/jpg/02/99/84/89/360_F_299848927_S0EwX0P6HWGigW6qZWFIBaczKMQuq5D9.jpg); */
+    /* background-image: url(https://www.rensvandeschoot.com/wp-content/uploads/2017/09/mathematics-board-formulas-wallpaper.jpg); */
+    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+    opacity: 0.80;
+}
 
 .headingText{
     width: 850px;
+    color: black;
 }
 
 .linkToVideo{

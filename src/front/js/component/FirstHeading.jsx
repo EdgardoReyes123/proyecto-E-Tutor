@@ -21,7 +21,7 @@ const FirstHeading = () => {
   });
 
   return (
-    <div id="About" className="container border-top">
+    <div id="About" className="container-fluid first border-top">
       <div className="carousel row p-5 mt-5">
         {data.map((item, index) => {
           return (
@@ -35,7 +35,7 @@ const FirstHeading = () => {
           );
         })}
       </div>
-      <div className="row p-5 mt-5">
+      <div className="row p-2 mt-5">
         <div className="headingText col-md-12">
           <h3 style={{ fontSize: "37px" }}>
             The best way to LEARN <span>Will Catch Your Eye</span>

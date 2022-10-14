@@ -9,7 +9,7 @@ const UpcommingsClasses = () => {
     const { store, actions } = useContext(Context);
 
   return (
-    <div id="About" className="container text-center border-top">
+    <div id="About" className="container text-center border-top pt-5">
         <div className="row mt-5">
                 
                 <div className="col-md-8 classes">
