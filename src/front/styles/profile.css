@@ -1,0 +1,76 @@
+body {
+  background-color: #f3f2ef;
+}
+.Button {
+  border-radius: 25px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.Row {
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  margin-left: 50px;
+  border-radius: 0px 0px 25px 25px;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.portada {
+  width: 100%;
+  height: auto;
+}
+
+.imgperfil {
+  padding-left: 20px;
+  transform: translateY(-50%);
+}
+
+.data {
+  padding-left: 20px;
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 10px;
+}
+
+.postInfo {
+  display: flex;
+  padding: 20px;
+  padding-left: 10px;
+}
+
+.postData {
+  padding-left: 10px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.title {
+  padding-left: 10px;
+}
+
+.postImg {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.bar {
+  border-color: transparent;
+  margin-top: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 600px;
+}
