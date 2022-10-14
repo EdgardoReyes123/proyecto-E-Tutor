@@ -88,8 +88,11 @@
 .comment-item{
     height: 100px;
     min-width: 500px;
-    border: 1px solid red;
+    border: 0.5px solid #dbdada;
     margin-top: 20px;
+    border-radius: 20px;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 55px;
 }
 
 .tarjeta-comments{
@@ -105,4 +108,27 @@
 
 .foto{
     opacity: 0.85;
+}
+
+.texto{
+    font-size: 12px;
+}
+
+.texto-title{
+    font-size: 16px;
+}
+
+.person{
+    height: 98px;
+    width: 110px;
+}
+
+.comment-item2{
+    height: 100px;
+    min-width: 500px;
+    border: 0.5px solid #dbdada;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-top-right-radius: 65px;
+    border-bottom-right-radius: 50px;
 }
