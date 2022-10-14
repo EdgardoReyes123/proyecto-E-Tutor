@@ -16,7 +16,7 @@ const UpcommingsClasses = () => {
                     <div className="boxTitle">
                         <h2 className="title">Upcomming Classes...</h2>
                     </div>
-                    <div className="tarjeta">
+                    <div>
                         <Carousel variant="dark">
                                 {store.planets.map((planet,index) => {
                                     return (
