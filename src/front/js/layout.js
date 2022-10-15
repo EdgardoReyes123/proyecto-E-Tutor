@@ -21,7 +21,7 @@ function Layout() {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
+          {/*<Navbar />*/}
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Demo />} path="/demo" />
@@ -29,7 +29,7 @@ function Layout() {
             <Route element={<Profile />} path="/profile" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
-          <Footer />
+          {/*<Footer />*/}
         </ScrollToTop>
       </BrowserRouter>
     </div>

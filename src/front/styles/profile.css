@@ -1,19 +1,19 @@
 body {
   background-color: #f3f2ef;
 }
+
 .Button {
   border-radius: 25px;
   margin-right: 5px;
   margin-bottom: 10px;
 }
 
-.Row {
-  display: flex;
+.row {
   justify-content: center;
+  margin: 20px;
 }
 
 .hero {
-  margin-left: 50px;
   border-radius: 0px 0px 25px 25px;
   margin-bottom: 10px;
   background-color: white;
@@ -35,12 +35,9 @@ body {
 }
 
 .post {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin: 10px;
+  border-radius: 25px;
 }
 
 .postInfo {
@@ -72,5 +69,24 @@ body {
   margin-top: 10px;
   margin: auto;
   margin-bottom: 10px;
-  width: 600px;
+  width: auto;
+  border-radius: 25px;
+}
+
+.bio {
+  padding: 20px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.edit {
+  float: right;
+  padding: 10px;
+  margin: 20px;
+}
+
+.edit:hover {
+  background-color: lightgray;
+  border-radius: 25px;
+  padding: 10px;
 }
