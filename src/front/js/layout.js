@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import { ScheduleClass } from "./pages/scheduleClass";
 import injectContext from "./store/appContext";
 
 import { NavbarP } from "./component/Navbar";
@@ -24,6 +25,7 @@ const Layout = () => {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Demo />} path="/demo" />
+            <Route element={<ScheduleClass />} path="/scheduleClass" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>

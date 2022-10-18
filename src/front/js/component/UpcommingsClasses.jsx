@@ -18,7 +18,8 @@ const UpcommingsClasses = () => {
                         <h2 className="title">Upcomming Classes...</h2>
                     </div>
                     <div>
-                        <Carousel variant="dark">
+                        <Carousel variant="dark"
+                        nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}>
                                 {store.planets.map((planet,index) => {
                                     return (
                                         <Carousel.Item interval={3000} key={planet.name}>
