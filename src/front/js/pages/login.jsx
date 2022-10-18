@@ -11,7 +11,7 @@ export const Login = () => {
 
   return (
     <>
-      <div>
+      <div className="container-fluid fondo">
         <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
@@ -21,10 +21,10 @@ export const Login = () => {
         </div>
         <div>
           <Form id="myForm" action="">
-            <Form.Group as={Row} className="mb-2 bg-light p-2 mt-3">
+            <Form.Group as={Row} className="mb-2  p-2 mt-3">
               <Col sm={3}></Col>
 
-              <Form.Label column sm={2} className="mb-2 bg-light">
+              <Form.Label column sm={2} className="mb-2 ">
                 Usuario
               </Form.Label>
               <Col sm={3}>
