@@ -21,8 +21,17 @@ const classView = () => {
                     </div>
                     <div className="classRoom">
                             <div className="d-inline-flex">
-                                <Image src="https://www.mundopsicologos.com/site/article/60606/50895/las-10-cualidades-de-una-persona-mas-valoradas-0_ai1.jpg" 
-                                className="tutor rounded-circle mw-100" alt="p1"/>
+                                {/* <Image src="https://www.mundopsicologos.com/site/article/60606/50895/las-10-cualidades-de-una-persona-mas-valoradas-0_ai1.jpg"  className="tutor rounded-circle mw-100" alt="p1"/>*/}
+                                <div className="row tutor rounded-circle mw-100" alt="p1">Tutor</div>
+                                <div className="row student-1 rounded-circle mw-100" alt="p1">St</div>
+                                <div className="row student-2 rounded-circle mw-100" alt="p1">St2</div>
+                                <div className="row student-3 rounded-circle mw-100" alt="p1">St3</div>
+                                <div className="row student-4 rounded-circle mw-100" alt="p1">St4</div>
+                                <div className="row student-5 rounded-circle mw-100" alt="p1">St5</div>
+                                <div className="row student-6 rounded-circle mw-100" alt="p1">St6</div>
+                                <div className="row student-7 rounded-circle mw-100" alt="p1">St7</div>
+                                <div className="row student-8 rounded-circle mw-100" alt="p1">St8</div>
+                                <div className="row student-9 rounded-circle mw-100" alt="p1">St9</div>
                             </div>
                     </div>
                 </div>
