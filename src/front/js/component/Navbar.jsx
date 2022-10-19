@@ -11,6 +11,9 @@ export const NavbarP = () => {
         <Navbar.Brand href="/">E-Tutor</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/Login">Login</Nav.Link>
+          <Nav.Link href="/Register">Register</Nav.Link>
+          <Nav.Link href="/SearchClass">SearchClass</Nav.Link>
           <Nav.Link href="/ScheduleClass">ScheduleClass</Nav.Link>
           <Nav.Link href="/Profile">Profile</Nav.Link>
         </Nav>

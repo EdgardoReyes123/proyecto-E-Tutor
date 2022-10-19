@@ -12,6 +12,7 @@ import { NavbarP } from "./component/Navbar";
 import { Footer } from "./component/footer";
 import { Profile } from "./pages/profile";
 import { Register } from "./pages/register";
+import { Login } from "./pages/login";
 import { CreateClass } from "./pages/createClass";
 import { SearchClass } from "./pages/searchClass";
 
@@ -25,7 +26,7 @@ function Layout() {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          {/*<Navbar />*/}
+          <NavbarP />
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Demo />} path="/demo" />
