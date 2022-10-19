@@ -34,7 +34,7 @@ export function Profile() {
 
   return (
     <Container>
-      <Row>
+      <Row className="rowProfile">
         {/*****************************RECUADRO PERFIL******************************************** */}
         <Col sm={10}>
           <div className="hero">
@@ -131,7 +131,7 @@ export function Profile() {
         {/*****************************RECUADRO PERFIL******************************************** */}
 
         <Col sm={10}>
-          <Row>
+          <Row className="rowProfile">
             {/*******************************Cuadro Detalles*************************************** */}
             <Col sm={4} className="bio">
               <h4>Details</h4>

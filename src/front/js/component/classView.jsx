@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
 import { Context } from "../store/appContext";
 import Button from 'react-bootstrap/Button';
+import "../../styles/home.css";
 
 const classView = () => {
     const { store, actions } = useContext(Context);
