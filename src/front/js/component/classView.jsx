@@ -7,8 +7,8 @@ const classView = () => {
     const { store, actions } = useContext(Context);
 
   return (
-    <div id="About" className="container border-top pt-5">
-        <div className="row mt-1">
+    <div id="About" className="container-fluid scheduleClassFondo border-top pt-5">
+        <div className="row justify-content-center mt-1">
                 <div className="col-md-8 classesMenu">
                     <Button variant="warning" onClick={() => navigate(`/${type}/${id}`)}>
                         Learn More!

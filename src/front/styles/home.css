@@ -299,3 +299,9 @@
     justify-content: center;
     position: absolute;
 }
+
+.scheduleClassFondo{
+    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+    opacity: 0.80;
+    background-size: 900px 650px;
+}
