@@ -13,6 +13,7 @@ import { Footer } from "./component/footer";
 import { Profile } from "./pages/profile";
 import { Register } from "./pages/register";
 import { CreateClass } from "./pages/createClass";
+import { SearchClass } from "./pages/searchClass";
 
 //create your first component
 function Layout() {
@@ -32,6 +33,7 @@ function Layout() {
             <Route element={<Register />} path="/register" />
             <Route element={<Login />} path="/login" />
             <Route element={<CreateClass />} path="/createClass" />
+            <Route element={<SearchClass />} path="/searchClass" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<Profile />} path="/profile" />
             <Route element={<h1>Not found!</h1>} />
