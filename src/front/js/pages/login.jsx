@@ -1,144 +1,81 @@
 import React, { useContext } from "react";
-// import {
-//   MDBBtn,
-//   MDBContainer,
-//   MDBRow,
-//   MDBCol,
-//   MDBCard,
-//   MDBCardBody,
-//   MDBInput,
-//   MDBIcon,
-// } from "mdb-react-ui-kit";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div>
-      {/* <MDBContainer fluid>
-        <MDBRow className="d-flex justify-content-center align-items-center h-100">
-          <MDBCol col="12">
-            <MDBCard
-              className="bg-dark text-white my-5 mx-auto"
-              style={{ borderRadius: "1rem", maxWidth: "400px" }}
+    <>
+      <div>
+        <div className="d-flex">
+          <span className="p-2 center-label">
+            <i className="fa fa-star "></i>
+          </span>
+          <h1 className="p-2 flex-grow-1">Login</h1>
+          <button className="btn btn-primary p-2 m-2">Close</button>
+        </div>
+        <div>
+          <Form id="myForm" action="">
+            <Form.Group as={Row} className="mb-2 bg-light p-2 mt-3">
+              <Col sm={3}></Col>
+
+              <Form.Label column sm={2} className="mb-2 bg-light">
+                Usuario
+              </Form.Label>
+              <Col sm={3}>
+                <Form.Control id="user" type="text" />
+              </Col>
+              <Col sm={4}></Col>
+
+              <Col sm={3}></Col>
+              <Form.Label column sm={2} className="mb-2">
+                Password
+              </Form.Label>
+              <Col sm={3}>
+                <Form.Control id="password" type="password" />
+              </Col>
+              <Col sm={4}></Col>
+
+              <Col sm={3}></Col>
+              <Form.Label column sm={2} className="mb-2">
+                Perfil
+              </Form.Label>
+
+              <Col sm={1}>
+                <Form.Check
+                  label="Tutor"
+                  type="radio"
+                  name="profile"
+                  value="tutor"
+                />
+              </Col>
+              <Col sm={1}>
+                <Form.Check
+                  label="Estudiante"
+                  type="radio"
+                  name="profile"
+                  value="student"
+                />
+              </Col>
+              <Col sm={5}></Col>
+            </Form.Group>
+          </Form>
+          <div className="d-flex justify-content-center">
+            <button
+              className="btn btn-primary p-2 m-2"
+              form="myForm"
+              type="submit"
             >
-              <MDBCardBody className="p-5 d-flex flex-column align-items-center mx-auto w-100">
-                <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
-                <p className="text-white-50 mb-5">
-                  Please enter your login and password!
-                </p>
-
-                <MDBInput
-                  wrapperClass="mb-4 mx-5 w-100"
-                  labelClass="text-white"
-                  label="Email address"
-                  id="formControlLg"
-                  type="email"
-                  size="lg"
-                />
-                <MDBInput
-                  wrapperClass="mb-4 mx-5 w-100"
-                  labelClass="text-white"
-                  label="Password"
-                  id="formControlLg"
-                  type="password"
-                  size="lg"
-                />
-
-                <p className="small mb-3 pb-lg-2">
-                  <a class="text-white-50" href="#!">
-                    Forgot password?
-                  </a>
-                </p>
-                <MDBBtn outline className="mx-2 px-5" color="white" size="lg">
-                  Login
-                </MDBBtn>
-
-                <div className="d-flex flex-row mt-3 mb-5">
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="m-3"
-                    style={{ color: "white" }}
-                  >
-                    <MDBIcon fab icon="facebook-f" size="lg" />
-                  </MDBBtn>
-
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="m-3"
-                    style={{ color: "white" }}
-                  >
-                    <MDBIcon fab icon="twitter" size="lg" />
-                  </MDBBtn>
-
-                  <MDBBtn
-                    tag="a"
-                    color="none"
-                    className="m-3"
-                    style={{ color: "white" }}
-                  >
-                    <MDBIcon fab icon="google" size="lg" />
-                  </MDBBtn>
-                </div>
-
-                <div>
-                  <p className="mb-0">
-                    Don't have an account?{" "}
-                    <a href="#!" class="text-white-50 fw-bold">
-                      Sign Up
-                    </a>
-                  </p>
-                </div>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer> */}
-
-      <div className="login container-fluid">
-        <div className="heading">
-          <h2>Sign in</h2>
-          <form action="#">
-            <div className="input-group input-group-lg">
-              <span className="input-group-addon">
-                <i className="fa fa-user"></i>
-              </span>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Username or email"
-              />
-            </div>
-
-            <div className="input-group input-group-lg">
-              <span className="input-group-addon">
-                <i className="fa fa-lock"></i>
-              </span>
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Password"
-              />
-            </div>
-
-            <button type="submit" className="float">
               Login
             </button>
-          </form>
+          </div>
         </div>
       </div>
-
-      <div className="text-center mt-5">
-        <form>
-          <input type="text" placeholder="usuario" />
-          <input type="password" placeholder="password" />
-        </form>
-      </div>
-    </div>
+    </>
   );
 };

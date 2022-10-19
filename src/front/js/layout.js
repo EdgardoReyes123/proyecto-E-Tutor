@@ -11,6 +11,8 @@ import injectContext from "./store/appContext";
 import { NavbarP } from "./component/Navbar";
 import { Footer } from "./component/footer";
 import { Profile } from "./pages/profile";
+import { Register } from "./pages/register";
+import { CreateClass } from "./pages/createClass";
 
 //create your first component
 function Layout() {
@@ -27,6 +29,9 @@ function Layout() {
             <Route element={<Home />} path="/" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<ScheduleClass />} path="/scheduleClass" />
+            <Route element={<Register />} path="/register" />
+            <Route element={<Login />} path="/login" />
+            <Route element={<CreateClass />} path="/createClass" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<Profile />} path="/profile" />
             <Route element={<h1>Not found!</h1>} />
