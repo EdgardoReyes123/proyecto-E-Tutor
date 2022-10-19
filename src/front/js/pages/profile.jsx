@@ -176,7 +176,7 @@ export function Profile() {
                   <Carousel>
                     <Carousel.Item>
                       <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src="https://picsum.photos/50"
                         alt="First slide"
                       />
@@ -190,7 +190,7 @@ export function Profile() {
                     </Carousel.Item>
                     <Carousel.Item>
                       <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src="https://picsum.photos/50"
                         alt="Second slide"
                       />
@@ -205,7 +205,7 @@ export function Profile() {
                     </Carousel.Item>
                     <Carousel.Item>
                       <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src="https://picsum.photos/50"
                         alt="Third slide"
                       />
