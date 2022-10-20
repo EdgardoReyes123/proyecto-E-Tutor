@@ -41,7 +41,6 @@ const FirstHeading = () => {
             The best way to LEARN <span>Will Catch Your Eye</span>
           </h3>
           <p style={{ fontSize: "18px" }}>
-            {" "}
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
             ligula porta felis euismod semper. Praesent commodo cursus magna,
             vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus

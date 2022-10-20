@@ -5,303 +5,142 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-.first{
-    /* background-image: url(https://t4.ftcdn.net/jpg/02/99/84/89/360_F_299848927_S0EwX0P6HWGigW6qZWFIBaczKMQuq5D9.jpg); */
-    /* background-image: url(https://www.rensvandeschoot.com/wp-content/uploads/2017/09/mathematics-board-formulas-wallpaper.jpg); */
-    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
-    opacity: 0.80;
+.first {
+  /* background-image: url(https://t4.ftcdn.net/jpg/02/99/84/89/360_F_299848927_S0EwX0P6HWGigW6qZWFIBaczKMQuq5D9.jpg); */
+  /* background-image: url(https://www.rensvandeschoot.com/wp-content/uploads/2017/09/mathematics-board-formulas-wallpaper.jpg); */
+  background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+  opacity: 0.8;
 }
 
-.carousel-control-next{
-    text-decoration: none;
+.carousel-control-next {
+  text-decoration: none;
 }
 
-.carouselNext{
-    color: rgba(236, 235, 235, 0.727);
-    font-size: 50px;
+.carouselNext {
+  color: rgba(236, 235, 235, 0.727);
+  font-size: 50px;
 }
 
 .carouselNext:hover {
-    color: black;
+  color: black;
 }
 
-.headingText{
-    width: 850px;
-    color: black;
+.headingText {
+  width: 850px;
+  color: black;
 }
 
-.linkToVideo{
-    font-weight: bold;
+.linkToVideo {
+  font-weight: bold;
 }
 
-.playIcon{
-    font-size: 20px;
-    margin-right: 8px;
+.playIcon {
+  font-size: 20px;
+  margin-right: 8px;
 }
 
-.carousel{
-    background: #f1f1f1;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
+.carousel {
+  background: #f1f1f1;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
-.carouselItem{
-    height: 20rem;
-    min-width: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+.carouselItem {
+  height: 20rem;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.classes{
-    border: 1px solid #dbdada;
-    height: 485px;
-    width: 450px;
-    padding: 0%;
-    border-radius: 10px;
+.classes {
+  border: 1px solid #dbdada;
+  height: 485px;
+  width: 450px;
+  padding: 0%;
+  border-radius: 10px;
 }
 
-.title{
-    /* border: 1px solid red; */
-    height: 25px;
-    min-width: 470px;
-    text-align: left;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-left: 10px;
+.title {
+  /* border: 1px solid red; */
+  height: 25px;
+  min-width: 470px;
+  text-align: left;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 10px;
 
-    /* width: 480px; */
+  /* width: 480px; */
 }
 
-.boxTitle{
-    border-bottom: 1px solid #dbdada;
-    margin-top: 0%;
-    border-top: 1px ;
-    height: 30px;
+.boxTitle {
+  border-bottom: 1px solid #dbdada;
+  margin-top: 0%;
+  border-top: 1px;
+  height: 30px;
 }
 
 .imgCard {
-    width: 286px;
-    height: 320px;
+  width: 286px;
+  height: 320px;
 }
 
-.comments{
-    border: 1px solid #dbdada;
-    height: 485px;
-    width: 580px;
-    padding: 0%;
-    border-radius: 10px;
-    margin-left: 100px;
+.comments {
+  border: 1px solid #dbdada;
+  height: 485px;
+  width: 580px;
+  padding: 0%;
+  border-radius: 10px;
+  margin-left: 100px;
 }
 
-.comment-item{
-    height: 100px;
-    min-width: 500px;
-    border: 0.5px solid #dbdada;
-    margin-top: 20px;
-    border-radius: 20px;
-    border-top-left-radius: 48px;
-    border-bottom-left-radius: 55px;
+.comment-item {
+  height: 100px;
+  min-width: 500px;
+  border: 0.5px solid #dbdada;
+  margin-top: 20px;
+  border-radius: 20px;
+  border-top-left-radius: 48px;
+  border-bottom-left-radius: 55px;
 }
 
-.tarjeta-comments{
-    margin: 4px, 4px;
-    padding: 30px;
-
+.tarjeta-comments {
+  margin: 4px, 4px;
+  padding: 30px;
 }
 
-.classTitle{
-    color: white;
-    /* backdrop-filter: blur(50px); */
+.classTitle {
+  color: white;
+  /* backdrop-filter: blur(50px); */
 }
 
-.foto{
-    opacity: 0.85;
+.foto {
+  opacity: 0.85;
 }
 
-.texto{
-    font-size: 12px;
+.texto {
+  font-size: 12px;
 }
 
-.texto-title{
-    font-size: 16px;
+.texto-title {
+  font-size: 16px;
 }
 
-.person{
-    height: 98px;
-    width: 110px;
+.person {
+  height: 98px;
+  width: 110px;
 }
 
-.comment-item2{
-    height: 100px;
-    min-width: 500px;
-    border: 0.5px solid #dbdada;
-    margin-top: 20px;
-    border-radius: 20px;
-    border-top-right-radius: 65px;
-    border-bottom-right-radius: 50px;
-}
-
-.classesMenu{
-    border: 1px solid #dbdada;
-    height: 487px;
-    width: 250px;
-    padding: 0%;
-    border-bottom-right-radius: 10px;
-}
-
-.boxTitle2{
-    border-bottom: 1px solid #dbdada;
-    margin-top: 0%;
-    border-top: 1px ;
-    height: 30px;
-}
-
-.classRoomView{
-    border: 1px solid #dbdada;
-    height: 487px;
-    width: 800px;
-    padding: 0%;
-    border-radius: 10px;
-    margin-left: 30px;
-}
-
-.classRoom{
-    background-image: url('/workspace/proyecto-E-Tutor/src/front/img/classRoom.JPG');
-    height: 450px;
-    width: 798px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-size: 798px 450px;
-}
-
-.tutor{
-    height: 70px;
-    width: 75px;
-    margin-top: 130px;
-    margin-left: 350px;
-    background-color: white;
-    /* text-align: center; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-1{
-    height: 65px;
-    width: 70px;
-    margin-top: 205px;
-    margin-left: 215px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-2{
-    height: 65px;
-    width: 70px;
-    margin-top: 280px;
-    margin-left: 150px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-3{
-    height: 65px;
-    width: 70px;
-    margin-top: 355px;
-    margin-left: 77px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-4{
-    height: 65px;
-    width: 70px;
-    margin-top: 205px;
-    margin-left: 355px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-5{
-    height: 65px;
-    width: 70px;
-    margin-top: 280px;
-    margin-left: 355px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-6{
-    height: 65px;
-    width: 70px;
-    margin-top: 355px;
-    margin-left: 357px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-7{
-    height: 65px;
-    width: 70px;
-    margin-top: 205px;
-    margin-left: 500px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-8{
-    height: 65px;
-    width: 70px;
-    margin-top: 280px;
-    margin-left: 565px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.student-9{
-    height: 65px;
-    width: 70px;
-    margin-top: 355px;
-    margin-left: 638px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-.scheduleClassFondo{
-    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
-    opacity: 0.80;
-    background-size: 900px 650px;
+.comment-item2 {
+  height: 100px;
+  min-width: 500px;
+  border: 0.5px solid #dbdada;
+  margin-top: 20px;
+  border-radius: 20px;
+  border-top-right-radius: 65px;
+  border-bottom-right-radius: 50px;
 }

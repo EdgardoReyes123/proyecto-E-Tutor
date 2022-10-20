@@ -1,0 +1,185 @@
+.classesMenu{
+    /* border: 1px solid #dbdada; */
+    height: 487px;
+    width: 250px;
+    padding: 0%;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+.boxTitle2{
+    border-bottom: 1px solid #085b0b;
+    /* border-bottom: 1px solid #dbdada; */
+    margin-top: 0%;
+    border-top: 1px ;
+    height: 30px;
+    background-color: white;
+}
+
+.classRoomView{
+    border: 1px solid #085b0b;
+    /* border: 1px solid #dbdada; */
+    height: 487px;
+    width: 800px;
+    padding: 0%;
+    border-radius: 10px;
+    margin-left: 30px;
+    background-color: white;
+}
+
+.classRoom{
+    background-image: url('/workspace/proyecto-E-Tutor/src/front/img/classRoom.JPG');
+    height: 450px;
+    width: 798px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size: 798px 450px;
+}
+
+.tutor{
+    height: 70px;
+    width: 75px;
+    margin-top: 130px;
+    margin-left: 350px;
+    background-color: white;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-1{
+    height: 65px;
+    width: 70px;
+    margin-top: 205px;
+    margin-left: 215px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-2{
+    height: 65px;
+    width: 70px;
+    margin-top: 280px;
+    margin-left: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-3{
+    height: 65px;
+    width: 70px;
+    margin-top: 355px;
+    margin-left: 77px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-4{
+    height: 65px;
+    width: 70px;
+    margin-top: 205px;
+    margin-left: 355px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-5{
+    height: 65px;
+    width: 70px;
+    margin-top: 280px;
+    margin-left: 355px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-6{
+    height: 65px;
+    width: 70px;
+    margin-top: 355px;
+    margin-left: 357px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-7{
+    height: 65px;
+    width: 70px;
+    margin-top: 205px;
+    margin-left: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-8{
+    height: 65px;
+    width: 70px;
+    margin-top: 280px;
+    margin-left: 565px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.student-9{
+    height: 65px;
+    width: 70px;
+    margin-top: 355px;
+    margin-left: 638px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.scheduleClassFondo{
+    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+    opacity: 0.95;
+    background-size: 900px 630px;
+    height: 630px;
+}
+
+.registerButton{
+    margin-top: 25px;
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.aboutClass{
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.aboutTitle{
+    margin-top: 80px;
+    font-size: 20px;
+    text-align: left;
+}

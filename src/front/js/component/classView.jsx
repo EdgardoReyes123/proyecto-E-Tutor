@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
 import { Context } from "../store/appContext";
 import Button from 'react-bootstrap/Button';
-import "../../styles/home.css";
 
 const classView = () => {
     const { store, actions } = useContext(Context);
@@ -11,8 +10,20 @@ const classView = () => {
     <div id="About" className="container-fluid scheduleClassFondo border-top pt-5">
         <div className="row justify-content-center mt-1">
                 <div className="col-md-8 classesMenu">
-                    <Button variant="warning" onClick={() => navigate(`/${type}/${id}`)}>
-                        Learn More!
+                    <h3 className="aboutTitle">
+                        The best way to LEARN <span>Will Catch Your Eye</span>
+                    </h3>
+                    <p className="aboutClass">
+                        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+                        ligula porta felis euismod semper. Praesent commodo cursus magna,
+                        vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                        commodo.
+                    </p>
+                    <Button variant="outline-primary" size="sm" className="registerButton" onClick={() => navigate(`/${type}/${id}`)}>
+                        Register
+                    </Button>
+                    <Button variant="outline-success" className="registerButton ms-2" onClick={() => navigate(`/${type}/${id}`)}>
+                        Content
                     </Button>
                     
                 </div>
