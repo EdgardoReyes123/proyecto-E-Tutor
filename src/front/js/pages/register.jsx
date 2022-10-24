@@ -15,11 +15,11 @@ export const Register = () => {
       <Col sm={12} className="data">
         <Form id="myForm" className="form" action="">
           <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3 info" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Enter email" required />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3 info" controlId="formBasicPassword">
               <Form.Control type="password" placeholder="Password" required />
             </Form.Group>
 
@@ -48,7 +48,7 @@ export const Register = () => {
           </Form.Group>
         </Form>
         <div className="d-flex justify-content-center">
-          <button className="btn p-2 m-2" form="myForm" type="submit">
+          <button className="btn-register p-2 m-2" form="myForm" type="submit">
             Submit
           </button>
         </div>

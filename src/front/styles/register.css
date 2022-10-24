@@ -14,10 +14,19 @@
   flex-direction: column;
 }
 
-.btn {
-  border-color: green;
-  border-radius: 30px;
+.btn-register {
+  border-color: #198754;
+  border-radius: 25px;
   font-size: 15px;
+  color: #198754;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+}
+
+.btn-register:hover {
+  background-color: #198754;
+  color: white;
 }
 
 .data {
@@ -26,4 +35,6 @@
 
 .form-control {
   padding: 10px;
+  border-color: #198754;
+  border-width: 2px;
 }
