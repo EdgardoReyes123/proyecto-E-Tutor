@@ -45,23 +45,6 @@ export const Login = () => {
               <Form.Label column sm={2} className="mb-2">
                 Perfil
               </Form.Label>
-
-              <Col sm={1}>
-                <Form.Check
-                  label="Tutor"
-                  type="radio"
-                  name="profile"
-                  value="tutor"
-                />
-              </Col>
-              <Col sm={1}>
-                <Form.Check
-                  label="Estudiante"
-                  type="radio"
-                  name="profile"
-                  value="student"
-                />
-              </Col>
               <Col sm={5}></Col>
             </Form.Group>
           </Form>

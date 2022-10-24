@@ -1,0 +1,29 @@
+.background {
+  background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+  opacity: 0.8;
+  background-size: 900px 630px;
+  height: 630px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.btn {
+  border-color: green;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.data {
+  padding: 10%;
+}
+
+.form-control {
+  padding: 10px;
+}
