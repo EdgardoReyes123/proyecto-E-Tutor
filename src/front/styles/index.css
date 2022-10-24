@@ -35,3 +35,9 @@
   opacity: 0.8;
   height: 80vh;
 }
+.cardClass {
+  /* width: 18em; */
+  /* height: 800px; */
+  border: none;
+  /* margin-left: 5px; */
+}

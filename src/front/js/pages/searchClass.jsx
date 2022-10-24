@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Context } from "../store/appContext";
+import React, { useState, useEffect, useContext } from "react";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -8,9 +7,11 @@ import "../../styles/home.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
+import { Context } from "../store/appContext";
 
 export const SearchClass = () => {
   const [cardIndex, setCardIndex] = useState(0);
+  const { store, actions } = useContext(Context);
 
   const clases = [
     { name: "clase 1" },
@@ -29,6 +30,7 @@ export const SearchClass = () => {
     { name: "clase 14" },
     { name: "clase 15" },
     { name: "clase 16" },
+    { name: "clase 17" },
   ];
 
   const handleDirection = (direction) => {
@@ -54,6 +56,20 @@ export const SearchClass = () => {
     slides.push(i);
   }
   const offset = 5;
+
+  // const getToDo = async () => {
+  //   let response = await fetch("https://swapi.dev/api/people", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "GET",
+  //   });
+  //   let data = await response.json();
+  //   console.log(data.results);
+  //   return data.results;
+  // };
+  // const tutores = getTodo();
+  // console.log(tutores);
   return (
     <>
       <div>
@@ -76,9 +92,10 @@ export const SearchClass = () => {
           <Form.Control id="fecha" type="date" />
           <Form.Select aria-label="Default select example">
             <option>Tutor</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {console.log(store.tutores)}
+            {store.tutores.map((tutor, index) => {
+              return <option value={index}>{tutor.name}</option>;
+            })}
           </Form.Select>
         </Form>
 
@@ -106,7 +123,7 @@ export const SearchClass = () => {
             // {store.planets.map((planet,index) => {
             return (
               <Carousel.Item key={slide}>
-                <div className="d-flex">
+                <div className="row gx-1">
                   {clases
                     .filter(
                       (planet, index) =>
@@ -114,17 +131,21 @@ export const SearchClass = () => {
                     )
                     .map((planet, index) => {
                       return (
-                        <Card key={planet.name} style={{ width: "18rem" }}>
-                          <Card.Img variant="top" src="holder.js/100px180" />
-                          <Card.Body>
-                            <Card.Title>{planet.name}</Card.Title>
-                            <Card.Text>
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                          </Card.Body>
-                        </Card>
+                        <div className="col-2">
+                          <Card key={planet.name} className="cardClass h-100">
+                            <Card.Img variant="top" src={rigoImageUrl} />
+                            {console.log(__dirname)}
+                            <Card.Body>
+                              <Card.Title>{planet.name}</Card.Title>
+                              <Card.Text>
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                              </Card.Text>
+                              <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                          </Card>
+                        </div>
                       );
                     })}
                 </div>
