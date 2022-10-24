@@ -14,7 +14,7 @@ export const Register = () => {
     <div className="background">
       <Col sm={12} className="data">
         <Form id="myForm" className="form" action="">
-          <Form.Group as={Row} className="mb-2 p-2 mt-3">
+          <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Enter email" required />
             </Form.Group>
