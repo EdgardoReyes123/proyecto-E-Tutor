@@ -124,7 +124,7 @@ export function Profile() {
                 <Button className="Button2" variant="success">
                   Visit Website
                 </Button>
-                <Button className="Button" variant="success">
+                <Button className="Button2" variant="success">
                   More
                 </Button>
               </div>
@@ -179,7 +179,7 @@ export function Profile() {
                   <Carousel>
                     <Carousel.Item>
                       <img
-                        className="d-block w-100"
+                        className="d-block w-50"
                         src="https://picsum.photos/50"
                         alt="First slide"
                       />

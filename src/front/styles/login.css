@@ -20,7 +20,7 @@
   height: 650px;
 }
 
-.data {
+.formData {
   padding: 10%;
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   justify-content: center;
 }
+
 .form-control {
   padding: 10px;
   border-color: #198754;

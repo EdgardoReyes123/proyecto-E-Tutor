@@ -12,8 +12,8 @@ export const Login = () => {
   return (
     <>
       <div className="background">
-        <Col sm={12} className="data">
-          <Form id="myForm" action="">
+        <Col sm={12} className="formData">
+          <Form id="myForm" action="" className="form">
             <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
               <Form.Group className="mb-3 info" controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="Enter email" required />
