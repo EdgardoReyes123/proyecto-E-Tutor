@@ -115,13 +115,16 @@ export function Profile() {
                 online inicia el 17 de octubre
               </p>
               <div>
-                <Button className="Button follow" variant="primary">
+                <Button
+                  className="Button btn btn-success follow"
+                  variant="success"
+                >
                   Following
                 </Button>
-                <Button className="Button" variant="primary">
+                <Button className="Button2" variant="success">
                   Visit Website
                 </Button>
-                <Button className="Button" variant="primary">
+                <Button className="Button" variant="success">
                   More
                 </Button>
               </div>

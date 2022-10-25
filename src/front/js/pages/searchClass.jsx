@@ -84,7 +84,7 @@ export const SearchClass = () => {
 
         <div className="d-flex justify-content-center">
           <button
-            className="btn btn-primary p-2 m-2"
+            className="Button btn btn-success p-2 m-2"
             form="myForm"
             type="submit"
           >
@@ -122,7 +122,9 @@ export const SearchClass = () => {
                               Some quick example text to build on the card title
                               and make up the bulk of the card's content.
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button className="Button5" variant="success">
+                              Go somewhere
+                            </Button>
                           </Card.Body>
                         </Card>
                       );

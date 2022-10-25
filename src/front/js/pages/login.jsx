@@ -17,7 +17,7 @@ export const Login = () => {
             <i className="fa fa-star "></i>
           </span>
           <h1 className="p-2 flex-grow-1">Login</h1>
-          <button className="btn btn-primary p-2 m-2">Close</button>
+          <button className=" Button7 btn btn-success p-2 m-2">Close</button>
         </div>
         <div>
           <Form id="myForm" action="">
@@ -67,7 +67,7 @@ export const Login = () => {
           </Form>
           <div className="d-flex justify-content-center">
             <button
-              className="btn btn-primary p-2 m-2"
+              className="Button btn btn-success p-2 m-2"
               form="myForm"
               type="submit"
             >
