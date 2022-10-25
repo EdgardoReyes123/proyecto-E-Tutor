@@ -19,6 +19,10 @@ const classView = () => {
                         vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
                         commodo.
                     </p>
+                    <div className="usersIcon">
+                        <i className="fas fa-users"></i>
+                    </div>
+                    
                     <Button variant="outline-primary" size="sm" className="registerButton" onClick={() => navigate(`/${type}/${id}`)}>
                         Register
                     </Button>
