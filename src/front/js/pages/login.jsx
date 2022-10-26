@@ -5,26 +5,27 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
+import FooterE from "../component/footer.js";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <>
-      <div>
-        <div className="d-flex">
+    // <>
+      <div className="container-fluid fondo">
+        {/* <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
           </span>
           <h1 className="p-2 flex-grow-1">Login</h1>
           <button className="btn btn-primary p-2 m-2">Close</button>
-        </div>
-        <div>
+        </div> */}
+        <div className="row loginForm">
           <Form id="myForm" action="">
-            <Form.Group as={Row} className="mb-2 bg-light p-2 mt-3">
+            <Form.Group as={Row} className="mb-2  p-2 mt-3">
               <Col sm={3}></Col>
 
-              <Form.Label column sm={2} className="mb-2 bg-light">
+              <Form.Label column sm={2} className="mb-2 ">
                 Usuario
               </Form.Label>
               <Col sm={3}>
@@ -50,7 +51,7 @@ export const Login = () => {
           </Form>
           <div className="d-flex justify-content-center">
             <button
-              className="btn btn-primary p-2 m-2"
+              className="loginButton btn btn-outline-success p-2 m-2"
               form="myForm"
               type="submit"
             >
@@ -59,6 +60,6 @@ export const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    // </>
   );
 };

@@ -1,0 +1,92 @@
+/* body {
+  background-color: #f3f2ef;
+} */
+
+.Button {
+  border-radius: 25px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.rowProfile {
+  justify-content: center;
+  margin: 20px;
+}
+
+.hero {
+  border-radius: 0px 0px 25px 25px;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.portada {
+  width: 100%;
+  height: auto;
+}
+
+.imgperfil {
+  padding-left: 20px;
+  transform: translateY(-50%);
+}
+
+.data {
+  padding-left: 20px;
+}
+
+.post {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 25px;
+}
+
+.postInfo {
+  display: flex;
+  padding: 20px;
+  padding-left: 10px;
+}
+
+.postData {
+  padding-left: 10px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.title {
+  padding-left: 10px;
+}
+
+.postImg {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.bar {
+  border-color: transparent;
+  margin-top: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: auto;
+  border-radius: 25px;
+}
+
+.bio {
+  padding: 20px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.edit {
+  float: right;
+  padding: 10px;
+  margin: 20px;
+}
+
+.edit:hover {
+  background-color: lightgray;
+  border-radius: 25px;
+  padding: 10px;
+}

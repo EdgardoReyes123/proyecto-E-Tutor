@@ -6,9 +6,26 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
 import "../../styles/register.css";
+import { useState } from "react";
 
 export const Register = () => {
-  const { store, actions } = useContext(Context);
+  // const { store, actions } = useContext(Context);
+
+  const [initialValues, setInitialValues] = useState({
+    username: "",
+    password: "",
+    rol: "",
+  })
+
+  const [registerValue, setRegisterValue] = useState([]);
+
+  const {actions} = useContext(Context)
+
+  const  registerForm = (e) => {
+    e.preventDefault();
+    setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+    actions.addUser(initialValues)
+  }
 
   return (
     <div className="background">
