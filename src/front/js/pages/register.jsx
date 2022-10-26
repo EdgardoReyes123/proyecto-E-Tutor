@@ -5,9 +5,26 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
+import { useState } from "react";
 
 export const Register = () => {
-  const { store, actions } = useContext(Context);
+  // const { store, actions } = useContext(Context);
+
+  const [initialValues, setInitialValues] = useState({
+    username: "",
+    password: "",
+    rol: "",
+  })
+
+  const [registerValue, setRegisterValue] = useState([]);
+
+  const {actions} = useContext(Context)
+
+  const  registerForm = (e) => {
+    e.preventDefault();
+    setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+    actions.addUser(initialValues)
+  }
 
   return (
     <>
@@ -27,7 +44,10 @@ export const Register = () => {
                 Usuario
               </Form.Label>
               <Col sm={3}>
-                <Form.Control id="user" type="text" />
+                <Form.Control onChange={(e) => setInitialValues({...initialValues, username: e.target.value})} 
+                id="user" type="text" 
+                value={initialValues.username} 
+                />
               </Col>
               <Col sm={4}></Col>
 
@@ -36,7 +56,9 @@ export const Register = () => {
                 Password
               </Form.Label>
               <Col sm={3}>
-                <Form.Control id="password" type="password" />
+                <Form.Control onChange={(e) => setInitialValues({...initialValues, password: e.target.value})}
+                id="password" type="password" 
+                value={initialValues.password} />
               </Col>
               <Col sm={4}></Col>
 
@@ -55,6 +77,7 @@ export const Register = () => {
               className="loginButton btn btn-outline-success p-2 m-2"
               form="myForm"
               type="submit"
+              onClick={registerForm} 
             >
               Registrarme
             </button>
