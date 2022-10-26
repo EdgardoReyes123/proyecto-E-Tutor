@@ -5,6 +5,19 @@
   align-self: center;
 }
 
+.loginForm{
+  /* margin-top: 50px; */
+  padding-top: 200px;
+}
+
+.loginButton{
+  /* margin-top: 25px; */
+  height: 40px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
 /* body {
   background-color: orange;
 } */
@@ -33,5 +46,7 @@
 .fondo {
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
   opacity: 0.8;
-  height: 80vh;
+  /* height: 80vh; */
+  height: 630px;
+  background-size: 1300px 630px;
 }
