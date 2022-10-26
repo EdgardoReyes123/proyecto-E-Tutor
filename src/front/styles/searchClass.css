@@ -6,8 +6,8 @@
 }
 
 /* body {
-  background-color: orange;
-} */
+    background-color: orange;
+  } */
 
 .carousel-control-next {
   text-decoration: none;
@@ -23,9 +23,9 @@
 }
 
 /* * {
-  border: 1px dashed red;
-  min-height: 10px;
-} */
+    border: 1px dashed red;
+    min-height: 10px;
+  } */
 .carousel-caption {
   color: black;
 }
@@ -37,7 +37,7 @@
 }
 .cardClass {
   width: 18rem;
-  height: 200px;
+  height: 400px;
   border: none;
-  /* margin-left: 5px; */
+  margin-right: 3px;
 }

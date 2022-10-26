@@ -1,9 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+import html1Url from "../../img/html-1.png";
+import html2Url from "../../img/html-2.png";
+import css1Url from "../../img/css-1.jpg";
+import css2Url from "../../img/css-2.png";
+import js1Url from "../../img/js-1.jpg";
+import js2Url from "../../img/js-2.jpg";
+import completoUrl from "../../img/completo.jpg";
+
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import "../../styles/home.css";
+import "../../styles/searchClass.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
@@ -14,23 +21,43 @@ export const SearchClass = () => {
   const { store, actions } = useContext(Context);
 
   const clases = [
-    { name: "clase 1" },
-    { name: "clase 2" },
-    { name: "clase 3" },
-    { name: "clase 4" },
-    { name: "clase 5" },
-    { name: "clase 6" },
-    { name: "clase 7" },
-    { name: "clase 8" },
-    { name: "clase 9" },
-    { name: "clase 10" },
-    { name: "clase 11" },
-    { name: "clase 12" },
-    { name: "clase 13" },
-    { name: "clase 14" },
-    { name: "clase 15" },
-    { name: "clase 16" },
-    { name: "clase 17" },
+    {
+      name: "clase 1",
+      description: "Curso basico de HTML",
+      url: html1Url,
+    },
+    {
+      name: "clase 2",
+      description: "Curso avanzado de HTML",
+      url: html2Url,
+    },
+    {
+      name: "clase 3",
+      description: "Curso basico de CSS. Aprende a dar estilo a tus paginas.",
+      url: css1Url,
+    },
+    {
+      name: "clase 4",
+      description:
+        "Curso CSS avanzado. Aprende todo acerca de los selectores y mucho mas.",
+      url: css2Url,
+    },
+    {
+      name: "clase 5",
+      description:
+        "Curso basico de JS. Lo que necesitas saber para dar accion a tu pagina",
+      url: js1Url,
+    },
+    {
+      name: "clase 6",
+      description: "Curso de JS avanzado",
+      url: js2Url,
+    },
+    {
+      name: "clase 7",
+      description: "Curso completo de HTML, CSS y JS.",
+      url: completoUrl,
+    },
   ];
 
   const handleDirection = (direction) => {
@@ -112,6 +139,7 @@ export const SearchClass = () => {
       <div>
         <Carousel
           variant="dark"
+          style={{ backgroundColor: "white" }}
           nextIcon={
             <i className="fas fa-chevron-circle-right carouselNext"></i>
           }
@@ -123,7 +151,7 @@ export const SearchClass = () => {
             // {store.planets.map((planet,index) => {
             return (
               <Carousel.Item key={slide}>
-                <div className="row gx-1">
+                <div className="d-flex">
                   {clases
                     .filter(
                       (planet, index) =>
@@ -131,21 +159,31 @@ export const SearchClass = () => {
                     )
                     .map((planet, index) => {
                       return (
-                        <div className="col-2">
-                          <Card key={planet.name} className="cardClass h-100">
-                            <Card.Img variant="top" src={rigoImageUrl} />
-                            {console.log(__dirname)}
-                            <Card.Body>
-                              <Card.Title>{planet.name}</Card.Title>
-                              <Card.Text>
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                              </Card.Text>
-                              <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                          </Card>
-                        </div>
+                        <Card key={planet.name} className="cardClass">
+                          <Card.Img
+                            variant="top"
+                            src={planet.url}
+                            style={{
+                              objectFit: "contain",
+                              // borderRadius: 55,
+                              // width: "50vw",
+                              paddingTop: "2px",
+                              height: "100px",
+                              // border: "1px solid red",
+                            }}
+                          />
+                          <Card.Body>
+                            <Card.Title>{planet.name}</Card.Title>
+                            <Card.Text
+                              style={{
+                                height: "100px",
+                              }}
+                            >
+                              {planet.description}
+                            </Card.Text>
+                            <Button variant="primary">Ver</Button>
+                          </Card.Body>
+                        </Card>
                       );
                     })}
                 </div>
