@@ -8,6 +8,7 @@ import "../../styles/home.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
+import "../../styles/searchClass.css";
 
 export const SearchClass = () => {
   const [cardIndex, setCardIndex] = useState(0);
@@ -64,13 +65,17 @@ export const SearchClass = () => {
           <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
         </div>
 
-        <Form id="myForm" action="" className="d-flex justify-content-center">
+        <Form
+          id="myForm"
+          action=""
+          className="d-flex justify-content-center form"
+        >
           <Form.Control
             id="palabraClave"
             type="text"
             placeholder="Palabra Clave"
           />
-          <Form.Label column sm={2} className="mb-2 bg-light">
+          <Form.Label column sm={2} className="mb-2 bg-light Fecha">
             Fecha
           </Form.Label>
           <Form.Control id="fecha" type="date" />
@@ -84,7 +89,7 @@ export const SearchClass = () => {
 
         <div className="d-flex justify-content-center">
           <button
-            className="btn btn-primary p-2 m-2"
+            className="Button btn btn-success p-2 m-2"
             form="myForm"
             type="submit"
           >
@@ -122,7 +127,9 @@ export const SearchClass = () => {
                               Some quick example text to build on the card title
                               and make up the bulk of the card's content.
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button className="Button5" variant="success">
+                              Go somewhere
+                            </Button>
                           </Card.Body>
                         </Card>
                       );
