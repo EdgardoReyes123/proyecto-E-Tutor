@@ -29,7 +29,7 @@ export const Register = () => {
   return (
     <>
       <div className="container-fluid fondo">
-        {/* <div className="d-flex">
+        <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
           </span>
