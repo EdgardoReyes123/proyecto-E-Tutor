@@ -5,14 +5,31 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
+import { useState } from "react";
 
 export const Register = () => {
-  const { store, actions } = useContext(Context);
+  // const { store, actions } = useContext(Context);
+
+  const [initialValues, setInitialValues] = useState({
+    username: "",
+    password: "",
+    rol: "",
+  })
+
+  const [registerValue, setRegisterValue] = useState([]);
+
+  const {actions} = useContext(Context)
+
+  const  registerForm = (e) => {
+    e.preventDefault();
+    setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+    actions.addUser(initialValues)
+  }
 
   return (
     <>
-      <div>
-        <div className="d-flex">
+      <div className="container-fluid fondo">
+        {/* <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
           </span>
@@ -21,13 +38,16 @@ export const Register = () => {
         </div>
         <div>
           <Form id="myForm" action="">
-            <Form.Group as={Row} className="mb-2 bg-light p-2 mt-3">
+            <Form.Group as={Row} className="mb-2 p-2 mt-3">
               <Col sm={3}></Col>
-              <Form.Label column sm={2} className="mb-2 bg-light">
+              <Form.Label column sm={2} className="mb-2">
                 Usuario
               </Form.Label>
               <Col sm={3}>
-                <Form.Control id="user" type="text" />
+                <Form.Control onChange={(e) => setInitialValues({...initialValues, username: e.target.value})} 
+                id="user" type="text" 
+                value={initialValues.username} 
+                />
               </Col>
               <Col sm={4}></Col>
 
@@ -36,7 +56,9 @@ export const Register = () => {
                 Password
               </Form.Label>
               <Col sm={3}>
-                <Form.Control id="password" type="password" />
+                <Form.Control onChange={(e) => setInitialValues({...initialValues, password: e.target.value})}
+                id="password" type="password" 
+                value={initialValues.password} />
               </Col>
               <Col sm={4}></Col>
 
@@ -55,6 +77,7 @@ export const Register = () => {
               className="Button btn btn-success p-2 m-2"
               form="myForm"
               type="submit"
+              onClick={registerForm} 
             >
               Registrarme
             </button>

@@ -1,3 +1,19 @@
+import { initializeApp } from 'firebase/app';
+import { addDoc, collection, getFirestore, getDocs } from "firebase/firestore";
+
+const firebaseConfig = {
+	apiKey: "AIzaSyBA8L9H6cbAsiWTuNLJOY7NXSOjObn5djo",
+	authDomain: "e-tutor-6dc22.firebaseapp.com",
+	projectId: "e-tutor-6dc22",
+	storageBucket: "e-tutor-6dc22.appspot.com",
+	messagingSenderId: "725051473181",
+	appId: "1:725051473181:web:5e282be3125039cc6f75f4"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -48,6 +64,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error)
 				}
+			},
+
+			addUser: async (user) => {
+				try {
+					const docRef = await addDoc(collection(db, "users"), user);
+					console.log("Document written with ID: ", docRef.id);
+				  } catch (e) {
+					console.error("Error adding document: ", e);
+				  }
 			},
 
 			getMessage: async () => {

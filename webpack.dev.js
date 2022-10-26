@@ -26,6 +26,7 @@ module.exports = merge(common, {
           webSocketURL: publicUrl
         },
     },
+    
     plugins: [
         // new FriendlyErrorsWebpackPlugin(),
         // new ErrorOverlayPlugin(),

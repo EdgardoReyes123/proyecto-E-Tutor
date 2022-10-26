@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/login.css";
+import FooterE from "../component/footer.js";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
@@ -35,6 +36,6 @@ export const Login = () => {
           </div>
         </Col>
       </div>
-    </>
+    // </>
   );
 };

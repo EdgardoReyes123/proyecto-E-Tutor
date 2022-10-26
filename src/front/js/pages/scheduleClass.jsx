@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/home.css";
+import "../../styles/scheduleClass.css";
 import ClassView from "../component/classView";
 
 export const ScheduleClass = () => {
