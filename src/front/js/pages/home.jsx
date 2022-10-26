@@ -17,35 +17,5 @@ export const Home = () => {
   );
 };
 
-  // try {
-  //   const docRef = await addDoc(collection(db, "users"), {
-  //     first: "Alan",
-  //     middle: "Mathison",
-  //     last: "Turing",
-  //     born: 1912
-  //   });
-  //   // addDoc(docRef, docData, {merge: true});
-  
-  //   console.log("Document written with ID: ", docRef.id);
-  // } catch (e) {
-  //   console.error("Error adding document: ", e);
-  // }
-  // function addDocument() {
-    
-  //   const addNewDocument = collection(db, 'users')
-  //   addDoc(addNewDocument).then(response => {
-  //     console.log(response)
-  //   }).catch(err => console.log(err.message))
-    
-  // }
-
-  
-  // useEffect(()=>{
-  //   addDocument()
-  // }, [])
-  // const querySnapshot = await getDocs(collection(db, "users"));
-  // querySnapshot.forEach((doc) => {
-  //   console.log(`${doc.id} => ${doc.data()}`);
-  // });
 
 

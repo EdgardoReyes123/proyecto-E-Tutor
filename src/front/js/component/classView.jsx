@@ -23,7 +23,7 @@ const classView = () => {
                         <i className="fas fa-users"></i>
                     </div>
                     
-                    <Button variant="outline-primary" size="sm" className="registerButton" onClick={() => navigate(`/${type}/${id}`)}>
+                    <Button variant="outline-success" size="sm" className="registerButton" onClick={() => navigate(`/${type}/${id}`)}>
                         Register
                     </Button>
                     <Button variant="outline-success" className="registerButton ms-2" onClick={() => navigate(`/${type}/${id}`)}>

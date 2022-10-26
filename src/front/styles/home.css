@@ -10,28 +10,43 @@
   /* background-image: url(https://www.rensvandeschoot.com/wp-content/uploads/2017/09/mathematics-board-formulas-wallpaper.jpg); */
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
   opacity: 0.8;
+  background-size: 1300px 750px;
 }
 
-.carousel-control-next {
+.carrusel{
+  width: 1024px;
+}
+
+/* .carousel-control-next {
   text-decoration: none;
-}
+} */
 
-.carouselNext {
+/* .carouselNext {
   color: rgba(236, 235, 235, 0.727);
   font-size: 50px;
 }
 
 .carouselNext:hover {
   color: black;
-}
+} */
 
 .headingText {
   width: 850px;
   color: black;
 }
 
+.headingTextTitle {
+  font-size: 37px;
+}
+
+.linkText{
+  width: 1100px;
+}
+
 .linkToVideo {
   font-weight: bold;
+  color: black;
+  font-size: 18px;
 }
 
 .playIcon {
@@ -39,22 +54,29 @@
   margin-right: 8px;
 }
 
-.carousel {
+/* .carousel {
   background: #f1f1f1;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+} */
+
+
+.carousel-I{
+  background: #f1f1f1;
+  text-align: -webkit-center;
+  height: 350px;
 }
 
-.carouselItem {
-  height: 20rem;
+/* .carouselItem {
+  height: 320px;
   min-width: 100%;
-  width: 100%;
+  width: 1184px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
+} */
 
 .classes {
   border: 1px solid #dbdada;
