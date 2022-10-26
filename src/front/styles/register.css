@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.btn-register {
+/* .btn-register {
   border-color: #198754;
   border-radius: 25px;
   font-size: 15px;
@@ -27,14 +27,23 @@
 .btn-register:hover {
   background-color: #198754;
   color: white;
+} */
+
+.registerBtn{
+  margin-top: 25px;
+  height: 40px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 15px;
 }
 
 .data {
   padding: 10%;
 }
 
-.form-control {
+.formCasillaRegister {
   padding: 10px;
   border-color: #198754;
-  border-width: 2px;
+  border-width: 1px;
+  width: 400px;
 }

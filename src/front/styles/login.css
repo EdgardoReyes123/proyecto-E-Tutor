@@ -1,4 +1,4 @@
-.btn-register {
+/* .btn-register {
   border-color: #198754;
   border-radius: 25px;
   font-size: 15px;
@@ -6,12 +6,20 @@
   width: 100px;
   text-align: center;
   background-color: white;
+} */
+
+.logButton{
+  margin-top: 25px;
+  height: 40px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 15px;
 }
 
-.btn-register:hover {
+/* .btn-register:hover {
   background-color: #198754;
   color: white;
-}
+} */
 
 .background {
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
@@ -33,8 +41,9 @@
   justify-content: center;
 }
 
-.form-control {
+.formCasilla {
   padding: 10px;
   border-color: #198754;
-  border-width: 2px;
+  border-width: 1px;
+  width: 300px;
 }
