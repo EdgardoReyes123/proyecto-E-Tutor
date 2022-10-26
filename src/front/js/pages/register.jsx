@@ -34,9 +34,9 @@ export const Register = () => {
             <i className="fa fa-star "></i>
           </span>
           <h1 className="p-2 flex-grow-1">Registro</h1>
-          <button className="btn btn-primary p-2 m-2">Close</button>
-        </div> */}
-        <div className="row loginForm">
+          <button className="Button6 btn btn-success p-2 m-2"> Close </button>
+        </div>
+        <div>
           <Form id="myForm" action="">
             <Form.Group as={Row} className="mb-2 p-2 mt-3">
               <Col sm={3}></Col>
@@ -74,7 +74,7 @@ export const Register = () => {
           </Form>
           <div className="d-flex justify-content-center">
             <button
-              className="loginButton btn btn-outline-success p-2 m-2"
+              className="Button btn btn-success p-2 m-2"
               form="myForm"
               type="submit"
               onClick={registerForm} 

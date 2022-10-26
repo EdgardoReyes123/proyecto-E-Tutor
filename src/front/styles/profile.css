@@ -3,9 +3,37 @@
 } */
 
 .Button {
+  border-color: #198754;
   border-radius: 25px;
-  margin-right: 5px;
-  margin-bottom: 10px;
+  font-size: 15px;
+  color: #198754;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.Button:hover {
+  background-color: #198754;
+  color: white;
+}
+
+.Button2 {
+  border-color: #77aaff;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #77aaff;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.Button2:hover {
+  background-color: #77aaff;
+  color: white;
 }
 
 .rowProfile {
@@ -77,6 +105,7 @@
   padding: 20px;
   background-color: white;
   border-radius: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .edit {
