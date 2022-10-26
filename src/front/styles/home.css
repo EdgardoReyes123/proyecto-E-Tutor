@@ -10,6 +10,7 @@
   /* background-image: url(https://www.rensvandeschoot.com/wp-content/uploads/2017/09/mathematics-board-formulas-wallpaper.jpg); */
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
   opacity: 0.8;
+  background-size: 1300px 750px;
 }
 
 .Button5 {
@@ -36,8 +37,6 @@
   border-color: greenyellow;
 }
 
-  /* background-size: 1300px 750px;
-} */
 
 .carrusel{
   width: 1024px;
