@@ -19,14 +19,11 @@ const UpcommingsClasses = () => {
                     </div>
                     <div>
                         <Carousel variant="dark"
-                        nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}>
+                        // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
+                        >
                                 {store.planets.map((planet,index) => {
                                     return (
                                         <Carousel.Item interval={3000} key={planet.name}>
-                                            {/* <UpcommingClassesCard
-                                            detail={planet}
-                                            type="planets"
-                                            id={index + 1} /> */}
                                             <img
                                             className="foto d-block w-100"
                                             src={`https://starwars-visualguide.com/assets/img/planets/${(index+2)}.jpg`}
