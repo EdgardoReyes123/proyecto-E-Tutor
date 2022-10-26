@@ -108,7 +108,7 @@ export function Profile() {
               </Modal>
               {/***************************MODAL************************************************ */}
             </div>
-            <div className="data">
+            <div className="dataProfile">
               <h5>4Geeeks Academy Venezuela</h5>
               <p>
                 Somos una academia de programacion web. Nuestra proxima cohorte
