@@ -2,3 +2,26 @@
   text-align: right;
   padding-right: 10px;
 }
+
+.Button5 {
+  border-radius: 100px;
+  width: 200px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  /* border-color: greenyellow; */
+}
+
+.classCard{
+  border: none;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.carouselNext {
+  color: rgba(30, 29, 29, 0.486);
+  font-size: 50px;
+}
+
+.carouselNext:hover {
+  color: black;
+} 

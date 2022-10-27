@@ -119,8 +119,8 @@ export const SearchClass = () => {
                     )
                     .map((planet, index) => {
                       return (
-                        <Card key={planet.name} style={{ width: "18rem" }}>
-                          <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card className="classCard" key={planet.name} style={{ width: "18rem" }}>
+                          <Card.Img variant="top" src="https://www.hitxgh.com/php_system/uploads/2021/05/learn-java.png" />
                           <Card.Body>
                             <Card.Title>{planet.name}</Card.Title>
                             <Card.Text>

@@ -5,9 +5,10 @@
   height: 630px;
 }
 
-.form {
+.formRegister {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .rowRegister {
