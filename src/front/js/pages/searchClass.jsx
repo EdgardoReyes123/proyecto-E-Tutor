@@ -99,14 +99,14 @@ export const SearchClass = () => {
   // const tutores = getTodo();
   // console.log(tutores);
   return (
-    <>
-      <div>
-        <div className="d-flex">
+    <div className="fondo">
+      <div className="mt-5">
+        {/* <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
           </span>
           <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
-        </div>
+        </div> */}
 
         <Form
           id="myForm"
@@ -137,15 +137,17 @@ export const SearchClass = () => {
 
         <div className="d-flex justify-content-center">
           <button
-            className="Button btn btn-success p-2 m-2"
+            className="Button btn btn-success"
             form="myForm"
             type="submit"
+            style={{ marginTop: "25px" }}
           >
             Buscar
           </button>
         </div>
       </div>
       <div>
+        <hr className="mb-2" />
         <Carousel
           variant="dark"
           style={{ backgroundColor: "white" }}
@@ -191,7 +193,7 @@ export const SearchClass = () => {
                               {planet.description}
                             </Card.Text>
                             <Button className="Button5" variant="success">
-                              Go somewhere
+                              Ver
                             </Button>
                           </Card.Body>
                         </Card>
@@ -203,6 +205,6 @@ export const SearchClass = () => {
           })}
         </Carousel>
       </div>
-    </>
+    </div>
   );
 };
