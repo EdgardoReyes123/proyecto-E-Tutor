@@ -11,6 +11,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faAward } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/profile.css";
 
 export function Profile() {
@@ -176,9 +177,12 @@ export function Profile() {
             <Col sm={4} className="bio">
               <h4>Details</h4>
               <p>
-                <FontAwesomeIcon icon={faStar} />5 Instructor Rating
+                <FontAwesomeIcon icon={faStar} /> 5 Instructor Rating
               </p>
               <p>
+                <p>
+                  <FontAwesomeIcon icon={faUser} /> 200 Followers
+                </p>
                 <FontAwesomeIcon icon={faAward} /> 500 Reviews
               </p>
               <p>
