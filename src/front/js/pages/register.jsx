@@ -1,66 +1,129 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../styles/home.css";
+import "../../styles/register.css";
+import { useState } from "react";
 
 export const Register = () => {
-  const { store, actions } = useContext(Context);
+  // const { store, actions } = useContext(Context);
+
+  const [initialValues, setInitialValues] = useState({
+    username: "",
+    password: "",
+    rol: "",
+    passwordConfirm: ""
+  })
+
+  const [registerValue, setRegisterValue] = useState([]);
+
+  const {actions} = useContext(Context)
+
+  const  registerForm = (e) => {
+    e.preventDefault();
+    setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+    console.log(initialValues);
+    if(validate(initialValues)){
+      setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+      actions.addUser(initialValues)
+      setInitialValues({
+        username: "",
+        password: "",
+        rol: "",
+        passwordConfirm: ""
+      })
+      // alert('Demo Form is submited');
+    }else{
+      setInitialValues({
+        username: initialValues.username,
+        password: "",
+        rol: initialValues.rol,
+        passwordConfirm: ""
+      })
+    }
+  }
+
+  const validate = (datos) => {
+    let isValid = true;
+    let error = "Passwords don't match.";
+
+    if (datos.password !== "undefined" && datos.passwordConfirm !== "undefined") {
+          
+      if (datos.password != datos.passwordConfirm) {
+        isValid = false;
+        console.log(error);
+        alert("Passwords don't match")
+      }
+    } 
+    return isValid;
+  }
 
   return (
-    <>
-      <div>
-        <div className="d-flex">
-          <span className="p-2 center-label">
-            <i className="fa fa-star "></i>
-          </span>
-          <h1 className="p-2 flex-grow-1">Registro</h1>
-          <button className="btn btn-primary p-2 m-2">Close</button>
-        </div>
-        <div>
-          <Form id="myForm" action="">
-            <Form.Group as={Row} className="mb-2 bg-light p-2 mt-3">
-              <Col sm={3}></Col>
-              <Form.Label column sm={2} className="mb-2 bg-light">
-                Usuario
-              </Form.Label>
-              <Col sm={3}>
-                <Form.Control id="user" type="text" />
-              </Col>
-              <Col sm={4}></Col>
-
-              <Col sm={3}></Col>
-              <Form.Label column sm={2} className="mb-2">
-                Password
-              </Form.Label>
-              <Col sm={3}>
-                <Form.Control id="password" type="password" />
-              </Col>
-              <Col sm={4}></Col>
-
-              <Col sm={3}></Col>
-              <Form.Label column sm={2} className="mb-2">
-                Reingresa el Password
-              </Form.Label>
-              <Col sm={3}>
-                <Form.Control id="validatePassword" type="password" />
-              </Col>
-              <Col sm={4}></Col>
+    <div className="background">
+      <Col sm={12} className="data">
+        <Form id="myForm" className="formRegister" action="">
+          <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
+            <Form.Group className="mb-3 info" controlId="formBasicEmail">
+              <Form.Control 
+              className="formCasillaRegister" 
+              type="email" 
+              placeholder="Enter email" required 
+              onChange={(e) => setInitialValues({...initialValues, username: e.target.value})}
+              value={initialValues.username}/>
             </Form.Group>
-          </Form>
-          <div className="d-flex justify-content-center">
-            <button
-              className="btn btn-primary p-2 m-2"
-              form="myForm"
-              type="submit"
-            >
-              Registrarme
-            </button>
-          </div>
+
+            <Form.Group className="mb-3 info" controlId="formBasicPassword">
+              <Form.Control 
+              className="formCasillaRegister" 
+              type="password" 
+              placeholder="Password" required 
+              onChange={(e) => setInitialValues({...initialValues, password: e.target.value})}
+              value={initialValues.password}/>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword2">
+              <Form.Control
+                className="formCasillaRegister"
+                type="password"
+                placeholder="Confirm Password" required
+                onChange={(e) => setInitialValues({...initialValues, passwordConfirm: e.target.value})}
+                value={initialValues.passwordConfirm}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check
+                label="Tutor"
+                type="radio"
+                name="profile"
+                value="tutor"
+                id="tutor"
+                onChange={(e) => setInitialValues({...initialValues, rol: e.target.value})}
+                />
+              <Form.Check
+                label="Student"
+                type="radio"
+                name="profile"
+                value="student"
+                id="student"
+                onChange={(e) => setInitialValues({...initialValues, rol: e.target.value})}
+              />
+              
+            </Form.Group>
+          </Form.Group>
+        </Form>
+        <div className="d-flex justify-content-center">
+          <button 
+          className="registerBtn btn btn-success p-2 m-2" 
+          form="myForm" 
+          type="submit"
+          onClick={registerForm}>
+            Submit
+          </button>
         </div>
-      </div>
-    </>
+      </Col>
+    </div>
   );
 };

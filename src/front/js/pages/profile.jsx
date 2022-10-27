@@ -108,20 +108,23 @@ export function Profile() {
               </Modal>
               {/***************************MODAL************************************************ */}
             </div>
-            <div className="data">
+            <div className="dataProfile">
               <h5>4Geeeks Academy Venezuela</h5>
               <p>
                 Somos una academia de programacion web. Nuestra proxima cohorte
                 online inicia el 17 de octubre
               </p>
               <div>
-                <Button className="Button follow" variant="primary">
+                <Button
+                  className="Button btn btn-success follow"
+                  variant="success"
+                >
                   Following
                 </Button>
-                <Button className="Button" variant="primary">
+                <Button className="Button2" variant="success">
                   Visit Website
                 </Button>
-                <Button className="Button" variant="primary">
+                <Button className="Button2" variant="success">
                   More
                 </Button>
               </div>
@@ -176,7 +179,7 @@ export function Profile() {
                   <Carousel>
                     <Carousel.Item>
                       <img
-                        className="d-block w-100"
+                        className="d-block w-50"
                         src="https://picsum.photos/50"
                         alt="First slide"
                       />
