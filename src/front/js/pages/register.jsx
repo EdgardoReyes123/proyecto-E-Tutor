@@ -14,6 +14,7 @@ export const Register = () => {
     username: "",
     password: "",
     rol: "",
+    passwordConfirm: ""
   })
 
   const [registerValue, setRegisterValue] = useState([]);
@@ -23,7 +24,40 @@ export const Register = () => {
   const  registerForm = (e) => {
     e.preventDefault();
     setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
-    actions.addUser(initialValues)
+    console.log(initialValues);
+    if(validate(initialValues)){
+      setRegisterValue((prevFormValues) => [...prevFormValues, initialValues]);
+      actions.addUser(initialValues)
+      setInitialValues({
+        username: "",
+        password: "",
+        rol: "",
+        passwordConfirm: ""
+      })
+      // alert('Demo Form is submited');
+    }else{
+      setInitialValues({
+        username: initialValues.username,
+        password: "",
+        rol: "",
+        passwordConfirm: ""
+      })
+    }
+  }
+
+  const validate = (datos) => {
+    let isValid = true;
+    let error = "Passwords don't match.";
+
+    if (datos.password !== "undefined" && datos.passwordConfirm !== "undefined") {
+          
+      if (datos.password != datos.passwordConfirm) {
+        isValid = false;
+        console.log(error);
+        alert("Passwords don't match")
+      }
+    } 
+    return isValid;
   }
 
   return (
@@ -53,8 +87,9 @@ export const Register = () => {
               <Form.Control
                 className="formCasillaRegister"
                 type="password"
-                placeholder="Confirm Password"
-                required
+                placeholder="Confirm Password" required
+                onChange={(e) => setInitialValues({...initialValues, passwordConfirm: e.target.value})}
+                value={initialValues.passwordConfirm}
               />
             </Form.Group>
 
@@ -65,14 +100,17 @@ export const Register = () => {
                 name="profile"
                 value="tutor"
                 id="tutor"
-              />
+                onChange={(e) => setInitialValues({...initialValues, rol: e.target.value})}
+                />
               <Form.Check
                 label="Student"
                 type="radio"
                 name="profile"
                 value="student"
                 id="student"
+                onChange={(e) => setInitialValues({...initialValues, rol: e.target.value})}
               />
+              
             </Form.Group>
           </Form.Group>
         </Form>
