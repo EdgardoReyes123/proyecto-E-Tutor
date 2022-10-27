@@ -119,3 +119,20 @@
   border-radius: 25px;
   padding: 10px;
 }
+
+.saveBtn {
+  border-color: #198754;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #198754;
+  width: 120px;
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.saveBtn:hover {
+  background-color: #198754;
+  color: white;
+}

@@ -55,7 +55,7 @@ export function Profile() {
               {/***************************MODAL************************************************ */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Modal heading</Modal.Title>
+                  <Modal.Title>Update your profile</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <Form>
@@ -63,10 +63,39 @@ export function Profile() {
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
                     >
-                      <Form.Label>Name</Form.Label>
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control type="text" placeholder="4Geek" autoFocus />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>Last Name</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="4Geek Venezuela"
+                        placeholder="Venezuela"
+                        autoFocus
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>Direction</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Venezuela"
+                        autoFocus
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="4geek@gmail.com"
                         autoFocus
                       />
                     </Form.Group>
@@ -98,10 +127,18 @@ export function Profile() {
                   </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
+                  <Button
+                    variant="secondary"
+                    className="Button2"
+                    onClick={handleClose}
+                  >
                     Close
                   </Button>
-                  <Button variant="primary" onClick={handleClose}>
+                  <Button
+                    variant="primary"
+                    className="saveBtn"
+                    onClick={handleClose}
+                  >
                     Save Changes
                   </Button>
                 </Modal.Footer>
@@ -193,7 +230,7 @@ export function Profile() {
                     </Carousel.Item>
                     <Carousel.Item>
                       <img
-                        className="d-block w-100"
+                        className="d-block w-50"
                         src="https://picsum.photos/50"
                         alt="Second slide"
                       />
@@ -208,7 +245,7 @@ export function Profile() {
                     </Carousel.Item>
                     <Carousel.Item>
                       <img
-                        className="d-block w-100"
+                        className="d-block w-50"
                         src="https://picsum.photos/50"
                         alt="Third slide"
                       />

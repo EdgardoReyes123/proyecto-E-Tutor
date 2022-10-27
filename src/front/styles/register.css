@@ -29,12 +29,20 @@
   color: white;
 } */
 
-.registerBtn{
+.registerBtn {
   margin-top: 25px;
   height: 40px;
   width: 120px;
   border-radius: 30px;
   font-size: 15px;
+  background-color: white;
+  border-color: #198754;
+  color: #198754;
+}
+
+.registerBtn:hover {
+  background-color: #198754;
+  color: white;
 }
 
 .data {
@@ -46,4 +54,8 @@
   border-color: #198754;
   border-width: 1px;
   width: 400px;
+}
+
+.form-check-input:checked {
+  background-color: #198754;
 }
