@@ -113,7 +113,7 @@ export const SearchClass = () => {
             type="text"
             placeholder="Palabra Clave"
           />
-          <Form.Label column sm={2} className="mb-2 bg-light">
+          <Form.Label column sm={2} className="mb-2 bg-light text-right">
             Fecha
           </Form.Label>
           <Form.Control id="fecha" type="date" />
@@ -121,7 +121,11 @@ export const SearchClass = () => {
             <option>Tutor</option>
             {console.log(store.tutores)}
             {store.tutores.map((tutor, index) => {
-              return <option value={index}>{tutor.name}</option>;
+              return (
+                <option key={index} value={index}>
+                  {tutor.name.first + " " + tutor.name.last}
+                </option>
+              );
             })}
           </Form.Select>
         </Form>

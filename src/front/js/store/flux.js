@@ -51,8 +51,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       getTutores: async () => {
         try {
-          let response = await fetch("https://swapi.dev/api/people");
+          let response = await fetch("https://randomuser.me/api/?results=10");
           let data = await response.json();
+          console.log(data.results);
           setStore({
             tutores: data.results,
           });
