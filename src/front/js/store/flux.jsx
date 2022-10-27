@@ -75,6 +75,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  }
 			},
 
+			getUsers: async () => {
+				const usersCol = collection(db, "users");
+				const userSnapshot = await getDocs(usersCol);
+				console.log(userSnapshot);
+				const userList = userSnapshot.docs.map((doc) => doc.data());
+				// return userList;
+				setStore({users: userList});
+			},
+
 			getMessage: async () => {
 				try{
 					// fetching data from the backend
