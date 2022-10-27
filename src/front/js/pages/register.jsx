@@ -39,7 +39,7 @@ export const Register = () => {
       setInitialValues({
         username: initialValues.username,
         password: "",
-        rol: "",
+        rol: initialValues.rol,
         passwordConfirm: ""
       })
     }

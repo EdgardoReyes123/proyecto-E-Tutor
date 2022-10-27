@@ -38,7 +38,7 @@ const FirstHeading = () => {
               />
               <Carousel.Caption>
               <h5> <span className="classTitle">{classFavorite.title}</span></h5>
-              <p><span className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</span></p>
+              <p><span className="classTitle">{classFavorite.tutor}</span></p>
               </Carousel.Caption>
             </Carousel.Item>
             );
