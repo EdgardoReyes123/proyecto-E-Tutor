@@ -30,8 +30,8 @@ const UpcommingsClasses = () => {
                                             alt="First slide"
                                             />
                                             <Carousel.Caption>
-                                            <h5 className="classTitle">{planet.name}</h5>
-                                            <p className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                            <h5><span className="classTitle">{planet.name}</span></h5>
+                                            <p><span className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</span></p>
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         

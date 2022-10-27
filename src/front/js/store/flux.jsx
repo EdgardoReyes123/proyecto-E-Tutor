@@ -14,6 +14,18 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
+//   try {
+// 	const docRef = await addDoc(collection(db, "classFavorites"), {
+// 		title: "Front-End / HTML-CSS",
+// 		duration: " 2 hours",
+// 		tutor: "Ignacio Romero",
+// 		picture: "https://www.onlinecoursereport.com/wp-content/uploads/2020/06/shutterstock_1150510607-1024x512.jpg"
+// 	});
+// 	console.log("Document written with ID: ", docRef.id);
+//   } catch (e) {
+// 	console.error("Error adding document: ", e);
+//   }
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -33,6 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			people: [],
 			planets: [],
+			classFavorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -64,6 +77,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error)
 				}
+			},
+
+			addClassFavorites: async () => {
+				try {
+					const docRef = await addDoc(collection(db, "classFavorites"), {
+						title: "Front-End / HTML-CSS",
+						duration: " 2 hours",
+						tutor: "Ignacio Romero",
+						picture: "https://www.onlinecoursereport.com/wp-content/uploads/2020/06/shutterstock_1150510607-1024x512.jpg"
+					});
+					console.log("Document written with ID: ", docRef.id);
+				  } catch (e) {
+					console.error("Error adding document: ", e);
+				  }
+			},
+
+			getClassFavorites: async () => {
+				const classFavoritesCol = collection(db, "classFavorites");
+				const classFavoritesSnapshot = await getDocs(classFavoritesCol);
+				console.log(classFavoritesSnapshot);
+				const classFavoritesList = classFavoritesSnapshot.docs.map((doc) => doc.data());
+				// return classFavoritesList;
+				setStore({classFavorites: classFavoritesList});
 			},
 
 			addUser: async (user) => {

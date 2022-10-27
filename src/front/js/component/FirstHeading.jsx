@@ -6,10 +6,11 @@ import { Context } from "../store/appContext";
 
 const FirstHeading = () => {
   const { store, actions } = useContext(Context);
-  const data = ["ITEM 1", "ITEM 2", "ITEM 3"];
+
+  // const data = ["ITEM 1", "ITEM 2", "ITEM 3"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselInfiniteScroll = () => {
-    if (currentIndex === data.length - 1) {
+    if (currentIndex === store.planets.length - 1) {
       return setCurrentIndex(0);
     }
     return setCurrentIndex(currentIndex + 1);
@@ -26,41 +27,24 @@ const FirstHeading = () => {
   return (
     <div id="About" className="container-fluid first border-top">
       <div className="row p-5 mt-5" style={{placeContent: "center"}}>
-        <Carousel className="carrusel" variant="dark"
-          // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
-          >
-          {store.planets.map((planet,index) => {
+        <Carousel className="carrusel" variant="dark">
+          {store.classFavorites.map((classFavorite,index) => {
           return (
-            <Carousel.Item className="carousel-I" interval={3000} key={planet.name}>
+            <Carousel.Item className="carousel-I" interval={3000} key={classFavorite.title}>
             <img
               className="foto d-block"
-              src={'https://www.onlinecoursereport.com/wp-content/uploads/2020/06/shutterstock_1150510607-1024x512.jpg'}
-              // src={`https://starwars-visualguide.com/assets/img/planets/${(index+2)}.jpg`}
+              src={classFavorite.picture}
               alt="First slide"
               />
               <Carousel.Caption>
-              <h5 className="classTitle">{planet.name}</h5>
-              <p className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h5> <span className="classTitle">{classFavorite.title}</span></h5>
+              <p><span className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</span></p>
               </Carousel.Caption>
             </Carousel.Item>
             );
             })}
         </Carousel>
       </div>
-
-      {/* <div className="carousel row p-5 mt-5">
-        {data.map((item, index) => {
-          return (
-            <h1
-              className="carouselItem"
-              style={{ transform: `translate(-${currentIndex * 100}%)` }}
-              key={index}
-            >
-              {item}
-            </h1>
-          );
-        })}
-      </div> */}
       <div className="row px-5 mt-3 mx-5 pb-5">
         <div className="headingText col-md-12">
           <h3 className="headingTextTitle">

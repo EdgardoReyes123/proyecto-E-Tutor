@@ -161,12 +161,16 @@
 }
 
 .classTitle {
-  color: white;
+  color: black;
+  /* background-color: white; */
+  background-color:rgba(240, 234, 234, 0.641);
   /* backdrop-filter: blur(50px); */
 }
 
 .foto {
-  opacity: 0.85;
+  /* opacity: 1.5; */
+  width: 1000px;
+  height: 412px;
 }
 
 .texto {
