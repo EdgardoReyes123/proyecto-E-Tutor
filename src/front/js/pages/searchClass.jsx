@@ -14,7 +14,6 @@ import "../../styles/searchClass.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
-import "../../styles/searchClass.css";
 import { Context } from "../store/appContext";
 
 export const SearchClass = () => {
@@ -64,10 +63,10 @@ export const SearchClass = () => {
   const handleDirection = (direction) => {
     if (direction == "start") {
       if (cardIndex + offset > clases.length - 1) {
-        console.log(0);
+        // console.log(0);
         setCardIndex(0);
       } else {
-        console.log(cardIndex + offset);
+        // console.log(cardIndex + offset);
         setCardIndex(cardIndex + offset);
       }
     }
@@ -100,7 +99,7 @@ export const SearchClass = () => {
   // console.log(tutores);
   return (
     <div className="fondo">
-      <div className="mt-5">
+      <div className="pt-5">
         {/* <div className="d-flex">
           <span className="p-2 center-label">
             <i className="fa fa-star "></i>
@@ -114,17 +113,19 @@ export const SearchClass = () => {
           className="d-flex justify-content-center form"
         >
           <Form.Control
+            className="keyWord"
             id="palabraClave"
             type="text"
             placeholder="Palabra Clave"
           />
-          <Form.Label column sm={2} className="mb-2 bg-light Fecha">
+          <Form.Label column sm={1} className="Fecha">
             Fecha
           </Form.Label>
           <Form.Control id="fecha" type="date" />
-          <Form.Select aria-label="Default select example">
+          <Form.Select className="tutorSelect" aria-label="Default select example">
             <option>Tutor</option>
-            {console.log(store.tutores)}
+            {/* {console.log(store.tutores)}
+            {console.log("HOLAAAAA")} */}
             {store.tutores.map((tutor, index) => {
               return (
                 <option key={index} value={index}>

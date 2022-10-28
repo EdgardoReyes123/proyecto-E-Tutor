@@ -96,7 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       getClassFavorites: async () => {
         const classFavoritesCol = collection(db, "classFavorites");
         const classFavoritesSnapshot = await getDocs(classFavoritesCol);
-        console.log(classFavoritesSnapshot);
+        // console.log(classFavoritesSnapshot);
         const classFavoritesList = classFavoritesSnapshot.docs.map((doc) =>
           doc.data()
         );
@@ -116,7 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       getUsers: async () => {
         const usersCol = collection(db, "users");
         const userSnapshot = await getDocs(usersCol);
-        console.log(userSnapshot);
+        // console.log(userSnapshot);
         const userList = userSnapshot.docs.map((doc) => doc.data());
         // return userList;
         setStore({ users: userList });
@@ -136,17 +136,44 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       getTutores: async () => {
-        try {
-          let response = await fetch("https://randomuser.me/api/?results=10");
-          let data = await response.json();
-          console.log(data.results);
-          setStore({
-            tutores: data.results,
-          });
-        } catch (error) {
-          console.log(error);
-        }
+        const tutoresCol = collection(db, "tutores");
+        const tutorSnapshot = await getDocs(tutoresCol);
+        // console.log(tutorSnapshot);
+        const tutorList = tutorSnapshot.docs.map((doc) => doc.data());
+        // return userList;
+        setStore({ tutores: tutorList });
       },
+
+      // getTutores: async () => {
+      //   try {
+      //     let response = await fetch("https://randomuser.me/api/?results=10");
+      //     let data = await response.json();
+      //     console.log(data.results);
+      //     console.log("888888888");
+      //     setStore({
+      //       tutores: data.results,
+      //     });
+      //     for (let tutor of data.results){
+      //       const docRef = await addDoc(collection(db, "tutores"), tutor);
+      //       console.log("Document written with ID: ", docRef.id);
+      //     }
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // },
+
+      // addTutores: async () => {
+      //   try {
+      //     for (let tutor of tutores){
+      //       const docRef = await addDoc(collection(db, "tutores"), tutor);
+      //       console.log("Document written with ID: ", docRef.id);
+      //     }
+      //     // const docRef = await addDoc(collection(db, "users"), user);
+      //     // console.log("Document written with ID: ", docRef.id);
+      //   } catch (e) {
+      //     console.error("Error adding document: ", e);
+      //   }
+      // },
 
       changeColor: (index, color) => {
         //get the store
