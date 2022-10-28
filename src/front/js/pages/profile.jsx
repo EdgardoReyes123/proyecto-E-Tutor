@@ -36,7 +36,7 @@ export function Profile() {
   };
 
   return (
-    <Container>
+    <Container className="fondo">
       <Row className="rowProfile">
         {/*****************************RECUADRO PERFIL******************************************** */}
         <Col sm={10}>
@@ -118,10 +118,7 @@ export function Profile() {
                 online inicia el 17 de octubre
               </p>
               <div>
-                <Button
-                  className="btn btn-success follow"
-                  variant="success"
-                >
+                <Button className="btn btn-success follow" variant="success">
                   Following
                 </Button>
                 <Button className="btn btn-success follow" variant="success">
@@ -152,14 +149,12 @@ export function Profile() {
               </p>
               <div>
                 <h4>About me</h4>
+                <p>Empecé a los 18 años y la programación cambió mi vida.</p>
                 <p>
-                  Empecé a los 18 años y la programación cambió mi vida.
-                </p>
-                <p>
-                  Aprendí con tutoriales en video, por eso creo en este formato 
-                  de enseñanza; el problema es que muchos cursos hablaban con términos 
-                  confusos, extraños y no creaban un proyecto real, es por eso que enseño 
-                  Creando Proyectos Reales.
+                  Aprendí con tutoriales en video, por eso creo en este formato
+                  de enseñanza; el problema es que muchos cursos hablaban con
+                  términos confusos, extraños y no creaban un proyecto real, es
+                  por eso que enseño Creando Proyectos Reales.
                 </p>
                 {/* <p>
                   Por años he trabajado con WordPress, Drupal, PHP, JavaScript, Laravel, 
@@ -190,33 +185,38 @@ export function Profile() {
                   <p className="title">4Geeks Academy Venezuela</p>
                 </div>
                 <div>
-                        <Carousel variant="dark"
-                        // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
-                        >
-                                {store.clasesGeneral.map((claseG,index) => {
-                                    return (
-                                        <Carousel.Item interval={3000} key={claseG.name}>
-                                            <img
-                                            className="foto2 d-block w-100"
-                                            // src={'https://cdn.windowsreport.com/wp-content/uploads/2019/12/html5-1200x900.jpg'} ---- HTML
-                                            // src={'https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript'} ---- JS
-                                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/06/how-browser-rendering-works.png'} --- HTM,CSS,JS
-                                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/04/utility-first-css-frameworks.png'} ----CSS
-                                            // src={'https://neoghco.github.io/Blog/images/html.png'} --- HTML
-                                            src={claseG.url}
-                                            alt="First slide"
-                                            />
-                                            <Carousel.Caption>
-                                            <h5><span className="classTitle">{claseG.name}</span></h5>
-                                            <p><span className="classTitle">{claseG.description}</span></p>
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        
-                                        
-                                    );
-                                })}
-                        </Carousel>
-                    </div>
+                  <Carousel
+                    variant="dark"
+                    // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
+                  >
+                    {store.clasesGeneral.map((claseG, index) => {
+                      return (
+                        <Carousel.Item interval={3000} key={claseG.name}>
+                          <img
+                            className="foto2 d-block w-100"
+                            // src={'https://cdn.windowsreport.com/wp-content/uploads/2019/12/html5-1200x900.jpg'} ---- HTML
+                            // src={'https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript'} ---- JS
+                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/06/how-browser-rendering-works.png'} --- HTM,CSS,JS
+                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/04/utility-first-css-frameworks.png'} ----CSS
+                            // src={'https://neoghco.github.io/Blog/images/html.png'} --- HTML
+                            src={claseG.url}
+                            alt="First slide"
+                          />
+                          <Carousel.Caption>
+                            <h5>
+                              <span className="classTitle">{claseG.name}</span>
+                            </h5>
+                            <p>
+                              <span className="classTitle">
+                                {claseG.description}
+                              </span>
+                            </p>
+                          </Carousel.Caption>
+                        </Carousel.Item>
+                      );
+                    })}
+                  </Carousel>
+                </div>
                 {/* <div className="postData">
                   <Carousel>
                     <Carousel.Item>
