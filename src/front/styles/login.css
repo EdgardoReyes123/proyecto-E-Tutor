@@ -8,6 +8,19 @@
   background-color: white;
 } */
 
+.backgroundLogin{
+  background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
+  opacity: 0.8;
+  background-size: 900px 630px;
+  height: 630px;
+}
+
+.loginTitle{
+  text-align: center;
+  padding-top: 180px;
+  color: black;
+}
+
 .logButton{
   margin-top: 25px;
   height: 40px;
@@ -21,16 +34,16 @@
   color: white;
 } */
 
-.background {
+/* .background {
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
   opacity: 0.8;
   background-size: 900px 650px;
   height: 650px;
-}
+} */
 
-.formData {
+/* .formData {
   padding: 10%;
-}
+} */
 
 .rowRegister {
   flex-direction: column;
@@ -39,7 +52,7 @@
 .formLogin {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  /* margin-top: 70px; */
 }
 
 .formCasilla {

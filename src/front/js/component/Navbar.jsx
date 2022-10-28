@@ -9,7 +9,7 @@ export const NavbarP= () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home"><i className="fas fa-book"></i> E-Tutor</Navbar.Brand>
+        <Navbar.Brand className="brandLogo" href="#home"><i className="fas fa-book brandLogo"></i> E-Tutor</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

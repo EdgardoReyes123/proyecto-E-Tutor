@@ -61,7 +61,8 @@ export const Register = () => {
   }
 
   return (
-    <div className="background">
+    <div className="backgroundRegister">
+      <h3 className="registerTitle">Register</h3>
       <Col sm={12} className="data">
         <Form id="myForm" className="formRegister" action="">
           <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
@@ -116,7 +117,7 @@ export const Register = () => {
         </Form>
         <div className="d-flex justify-content-center">
           <button 
-          className="registerBtn btn btn-success p-2 m-2" 
+          className="registerBtn btn btn-success" 
           form="myForm" 
           type="submit"
           onClick={registerForm}>
