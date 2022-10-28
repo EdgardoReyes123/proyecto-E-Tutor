@@ -11,17 +11,22 @@ const classView = () => {
         <div className="row justify-content-center mt-1">
                 <div className="col-md-8 classesMenu">
                     <h3 className="aboutTitle">
-                        The best way to LEARN <span>Will Catch Your Eye</span>
+                        Entendiendo <span>HTML</span>
                     </h3>
                     <p className="aboutClass">
-                        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                        ligula porta felis euismod semper. Praesent commodo cursus magna,
-                        vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                        commodo.
+                        Un curso paso a paso si deseas comenzar en el mundo de la Programación Web.
                     </p>
+                    <p className="aboutClass">
+                        En este curso aprenderás HTML.
+                    </p>
+                    <p className="aboutClass">
+                        El Curso Incluye 1 proyecto final, puedes ver los videos con los demos totalmente gratis!
+                    </p>
+
                     <div className="usersIcon">
-                        <i className="fas fa-users"></i>
+                        <p><i className="fas fa-users"></i> 8 </p>
                     </div>
+                    
                     
                     <Button variant="outline-success" size="sm" className="registerButton" onClick={() => navigate(`/${type}/${id}`)}>
                         Register

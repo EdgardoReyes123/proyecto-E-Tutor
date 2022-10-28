@@ -440,7 +440,7 @@
 }
 
 .registerButton{
-    margin-top: 25px;
+    /* margin-top: 25px; */
     height: 40px;
     width: 120px;
     border-radius: 30px;
@@ -448,7 +448,7 @@
 }
 
 .aboutClass{
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     text-align: left;
 }
@@ -457,6 +457,7 @@
     margin-top: 80px;
     font-size: 20px;
     text-align: left;
+    font-weight: bold;
 }
 
 .usersIcon{
