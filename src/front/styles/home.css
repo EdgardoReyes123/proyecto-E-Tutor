@@ -13,6 +13,11 @@
   background-size: 1300px 750px;
 }
 
+.logoName{
+  font-weight: bold;
+  color: green;
+}
+
 .Button6 {
   border-radius: 100px;
   width: 80px;
@@ -34,6 +39,13 @@
 .carrusel{
   width: 1024px;
 }
+
+/* .commentsCarousel{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+} */
 
 /* .carousel-control-next {
   text-decoration: none;
@@ -70,6 +82,7 @@
 .playIcon {
   font-size: 20px;
   margin-right: 8px;
+  color: red;
 }
 
 /* .carousel {
@@ -164,6 +177,10 @@
   /* opacity: 1.5; */
   width: 1000px;
   height: 412px;
+}
+
+.foto2{
+  opacity: 0.85;
 }
 
 .texto {

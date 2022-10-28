@@ -26,7 +26,7 @@ const FirstHeading = () => {
 
   return (
     <div id="About" className="container-fluid first border-top">
-      <div className="row p-5 mt-5" style={{placeContent: "center"}}>
+      <div className="row p-4 mt-5" style={{placeContent: "center"}}>
         <Carousel className="carrusel" variant="dark">
           {store.classFavorites.map((classFavorite,index) => {
           return (
@@ -48,18 +48,17 @@ const FirstHeading = () => {
       <div className="row px-5 mt-3 mx-5 pb-5">
         <div className="headingText col-md-12">
           <h3 className="headingTextTitle">
-            The best way to LEARN <span>Will Catch Your Eye</span>
+            El mejor camino para Aprender <span className="logoName">E-Tutor</span>
           </h3>
           <p style={{ fontSize: "18px" }}>
-            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-            ligula porta felis euismod semper. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.
+            Ponemos en contacto a tutores y alumnos 
+            con el objetivo de ofrecer tutorías presenciales o virtuales 
+            para estudiantes y profesionales.
           </p>
         </div>
-        <div className="linkText col-12 text-end">
+        <div className="linkText col-12 text-end pb-5">
           {/* <i className="fas fa-play-circle playIcon"></i> */}
-          <p className="linkToVideo"><i className="fas fa-play-circle playIcon"></i>Will Catch Your Eye</p>
+          <p className="linkToVideo"><i className="fas fa-play-circle playIcon"></i>What people think</p>
         </div>
       </div>
     </div>

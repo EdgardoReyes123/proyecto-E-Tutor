@@ -25,7 +25,7 @@ const UpcommingsClasses = () => {
                                     return (
                                         <Carousel.Item interval={3000} key={planet.name}>
                                             <img
-                                            className="foto d-block w-100"
+                                            className="foto2 d-block w-100"
                                             src={`https://starwars-visualguide.com/assets/img/planets/${(index+2)}.jpg`}
                                             alt="First slide"
                                             />
