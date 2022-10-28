@@ -1,11 +1,21 @@
 .Fecha {
   text-align: right;
   padding-right: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.buscarButton{
+  margin-top: 25px;
+  height: 40px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 15px;
 }
 
 .Button5 {
   border-radius: 100px;
-  width: 200px;
+  width: 100px;
   margin-right: 5px;
   margin-bottom: 10px;
   /* border-color: greenyellow; */
@@ -15,6 +25,7 @@
   border: none;
   margin-left: 3px;
   margin-right: 3px;
+  
 }
 
 .carouselNext {
@@ -85,5 +96,9 @@
 
 .keyWord{
   margin-left: 20px;
+  border-color: green;
+}
+
+.fechaSelect{
   border-color: green;
 }

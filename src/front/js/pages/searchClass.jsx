@@ -84,29 +84,9 @@ export const SearchClass = () => {
   }
   const offset = 5;
 
-  // const getToDo = async () => {
-  //   let response = await fetch("https://swapi.dev/api/people", {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     method: "GET",
-  //   });
-  //   let data = await response.json();
-  //   console.log(data.results);
-  //   return data.results;
-  // };
-  // const tutores = getTodo();
-  // console.log(tutores);
   return (
     <div className="fondo">
       <div className="pt-5">
-        {/* <div className="d-flex">
-          <span className="p-2 center-label">
-            <i className="fa fa-star "></i>
-          </span>
-          <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
-        </div> */}
-
         <Form
           id="myForm"
           action=""
@@ -121,7 +101,7 @@ export const SearchClass = () => {
           <Form.Label column sm={1} className="Fecha">
             Fecha
           </Form.Label>
-          <Form.Control id="fecha" type="date" />
+          <Form.Control className="fechaSelect" id="fecha" type="date" />
           <Form.Select className="tutorSelect" aria-label="Default select example">
             <option>Tutor</option>
             {/* {console.log(store.tutores)}
@@ -138,7 +118,7 @@ export const SearchClass = () => {
 
         <div className="d-flex justify-content-center">
           <button
-            className="Button btn btn-success"
+            className="btn btn-success buscarButton"
             form="myForm"
             type="submit"
             style={{ marginTop: "25px" }}
@@ -171,7 +151,7 @@ export const SearchClass = () => {
                     )
                     .map((planet, index) => {
                       return (
-                        <Card key={planet.name} className="cardClass">
+                        <Card key={planet.name} className="cardClass text-center">
                           <Card.Img
                             variant="top"
                             src={planet.url}
@@ -209,3 +189,27 @@ export const SearchClass = () => {
     </div>
   );
 };
+
+
+
+  // const getToDo = async () => {
+  //   let response = await fetch("https://swapi.dev/api/people", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "GET",
+  //   });
+  //   let data = await response.json();
+  //   console.log(data.results);
+  //   return data.results;
+  // };
+  // const tutores = getTodo();
+  // console.log(tutores);
+
+
+          {/* <div className="d-flex">
+          <span className="p-2 center-label">
+            <i className="fa fa-star "></i>
+          </span>
+          <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
+        </div> */}
