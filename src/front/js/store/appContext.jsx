@@ -34,6 +34,10 @@ const injectContext = (PassedComponent) => {
       state.actions.getPlanets();
       state.actions.getPeople();
       state.actions.getTutores();
+      state.actions.getClass();
+      state.actions.getClassGeneral();
+      // state.actions.addClasesGeneral();
+      // state.actions.addClases();
       // state.actions.addTutores();
     }, []);
 

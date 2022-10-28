@@ -11,7 +11,7 @@ const UpcommingsClasses = () => {
 
   return (
     <div id="About" className="container text-center border-top pt-5">
-        <div className="row mt-5">
+        <div className="row mt-5 pb-5">
                 
                 <div className="col-md-8 classes">
                     <div className="boxTitle">
@@ -21,17 +21,22 @@ const UpcommingsClasses = () => {
                         <Carousel variant="dark"
                         // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
                         >
-                                {store.planets.map((planet,index) => {
+                                {store.clasesGeneral.map((claseG,index) => {
                                     return (
-                                        <Carousel.Item interval={3000} key={planet.name}>
+                                        <Carousel.Item interval={3000} key={claseG.name}>
                                             <img
                                             className="foto2 d-block w-100"
-                                            src={`https://starwars-visualguide.com/assets/img/planets/${(index+2)}.jpg`}
+                                            // src={'https://cdn.windowsreport.com/wp-content/uploads/2019/12/html5-1200x900.jpg'} ---- HTML
+                                            // src={'https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript'} ---- JS
+                                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/06/how-browser-rendering-works.png'} --- HTM,CSS,JS
+                                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/04/utility-first-css-frameworks.png'} ----CSS
+                                            // src={'https://neoghco.github.io/Blog/images/html.png'} --- HTML
+                                            src={claseG.url}
                                             alt="First slide"
                                             />
                                             <Carousel.Caption>
-                                            <h5><span className="classTitle">{planet.name}</span></h5>
-                                            <p><span className="classTitle">Nulla vitae elit libero, a pharetra augue mollis interdum.</span></p>
+                                            <h5><span className="classTitle">{claseG.name}</span></h5>
+                                            <p><span className="classTitle">{claseG.description}</span></p>
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         
@@ -52,12 +57,12 @@ const UpcommingsClasses = () => {
                                 className="person rounded-circle mw-100" alt="p1"/>
                                 <div>
                                     <h3 className="texto-title">
-                                        The Second Heading <span>Is Pretty Cool Too.</span>
+                                       Veronica C. - <span>"Muy buen Curso!"</span>
                                     </h3>
                                     <p className="texto"> 
-                                        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                                        id ligula porta felis euismod semper. Praesent commodo cursus magna,
-                                        vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                                        Aprendí muchísimo en estos meses, 
+                                        las clases son dinámicas, enseña excelentes practicas y va actualizando 
+                                        los proyectos que quedan obsoletos/desactualizados.
                                     </p>
                                 </div>
                             </div>
@@ -66,16 +71,32 @@ const UpcommingsClasses = () => {
                             <div className="d-inline-flex">
                                 <div>
                                     <h3 className="texto-title">
-                                        The Second Heading <span>Is Pretty Cool Too.</span>
+                                        Estefany P. -<span>"Asombroso Contenido"</span>
                                     </h3>
                                     <p className="texto"> 
-                                        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
-                                        id ligula porta felis euismod semper. Praesent commodo cursus magna,
-                                        vel scelerisque nisl consectetur.
+                                        A lo largo de mi recorrido en este curso he aprendido muchísimas cosas 
+                                        con respecto a la programación, no podría estar más satisfecha. 
+                                        Gracias al profesor por crear este asombroso contenido.
                                     </p>
                                 </div>
-                                <Image src="https://cdn.create.vista.com/api/media/medium/329263782/stock-photo-handsome-smiling-man-taking-selfie?token=" 
+                                <Image src="https://www.recreoviral.com/wp-content/uploads/2015/01/mitad-2-personas-2.jpg" 
                                 className="person rounded-circle mw-100" alt="p1"/>
+                            </div>
+                        </div>
+                        <div className="comment-item">
+                            <div className="d-inline-flex">
+                                <Image src="http://www.paredro.com/wp-content/uploads/2015/08/shutterstock_188419790-e1439475344980.jpg" 
+                                className="person rounded-circle mw-100" alt="p1"/>
+                                <div>
+                                    <h3 className="texto-title">
+                                       Mauricio G. - <span>"Super recomendado!!"</span>
+                                    </h3>
+                                    <p className="texto"> 
+                                    Es un curso excelente, actualizado y donde enseña bastante y con el que 
+                                    con las herramientas y conocimientos que proporciona podemos construir 
+                                    muchos proyectos que se nos ocurran.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

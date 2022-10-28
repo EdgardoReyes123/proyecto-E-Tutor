@@ -20,49 +20,9 @@ export const SearchClass = () => {
   const [cardIndex, setCardIndex] = useState(0);
   const { store, actions } = useContext(Context);
 
-  const clases = [
-    {
-      name: "clase 1",
-      description: "Curso basico de HTML",
-      url: html1Url,
-    },
-    {
-      name: "clase 2",
-      description: "Curso avanzado de HTML",
-      url: html2Url,
-    },
-    {
-      name: "clase 3",
-      description: "Curso basico de CSS. Aprende a dar estilo a tus paginas.",
-      url: css1Url,
-    },
-    {
-      name: "clase 4",
-      description:
-        "Curso CSS avanzado. Aprende todo acerca de los selectores y mucho mas.",
-      url: css2Url,
-    },
-    {
-      name: "clase 5",
-      description:
-        "Curso basico de JS. Lo que necesitas saber para dar accion a tu pagina",
-      url: js1Url,
-    },
-    {
-      name: "clase 6",
-      description: "Curso de JS avanzado",
-      url: js2Url,
-    },
-    {
-      name: "clase 7",
-      description: "Curso completo de HTML, CSS y JS.",
-      url: completoUrl,
-    },
-  ];
-
   const handleDirection = (direction) => {
     if (direction == "start") {
-      if (cardIndex + offset > clases.length - 1) {
+      if (cardIndex + offset > store.clases.length - 1) {
         // console.log(0);
         setCardIndex(0);
       } else {
@@ -73,11 +33,11 @@ export const SearchClass = () => {
 
     if (direction == "end") {
       if (cardIndex - offset < 0)
-        setCardIndex(Math.floor((clases.length - 1) / 5) * 5);
+        setCardIndex(Math.floor((store.clases.length - 1) / 5) * 5);
       else setCardIndex(cardIndex - offset);
     }
   };
-  const numberOfSlides = Math.floor(clases.length / 5) + 1;
+  const numberOfSlides = Math.floor(store.clases.length / 5) + 1;
   const slides = [];
   for (let i = 0; i < numberOfSlides; i++) {
     slides.push(i);
@@ -144,17 +104,17 @@ export const SearchClass = () => {
             return (
               <Carousel.Item key={slide}>
                 <div className="d-flex">
-                  {clases
+                  {store.clases
                     .filter(
-                      (planet, index) =>
+                      (clase, index) =>
                         index >= cardIndex && index < cardIndex + offset
                     )
-                    .map((planet, index) => {
+                    .map((clase, index) => {
                       return (
-                        <Card key={planet.name} className="cardClass text-center">
+                        <Card key={clase.name} className="cardClass text-center">
                           <Card.Img
                             variant="top"
-                            src={planet.url}
+                            src={clase.url}
                             style={{
                               objectFit: "contain",
                               // borderRadius: 55,
@@ -165,13 +125,13 @@ export const SearchClass = () => {
                             }}
                           />
                           <Card.Body>
-                            <Card.Title>{planet.name}</Card.Title>
+                            <Card.Title>{clase.name}</Card.Title>
                             <Card.Text
                               style={{
                                 height: "100px",
                               }}
                             >
-                              {planet.description}
+                              {clase.description}
                             </Card.Text>
                             <Button className="Button5" variant="success">
                               Ver
@@ -213,3 +173,44 @@ export const SearchClass = () => {
           </span>
           <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
         </div> */}
+
+
+  // const clases = [
+  //   {
+  //     name: "clase 1",
+  //     description: "Curso basico de HTML",
+  //     url: html1Url,
+  //   },
+  //   {
+  //     name: "clase 2",
+  //     description: "Curso avanzado de HTML",
+  //     url: html2Url,
+  //   },
+  //   {
+  //     name: "clase 3",
+  //     description: "Curso basico de CSS. Aprende a dar estilo a tus paginas.",
+  //     url: css1Url,
+  //   },
+  //   {
+  //     name: "clase 4",
+  //     description:
+  //       "Curso CSS avanzado. Aprende todo acerca de los selectores y mucho mas.",
+  //     url: css2Url,
+  //   },
+  //   {
+  //     name: "clase 5",
+  //     description:
+  //       "Curso basico de JS. Lo que necesitas saber para dar accion a tu pagina",
+  //     url: js1Url,
+  //   },
+  //   {
+  //     name: "clase 6",
+  //     description: "Curso de JS avanzado",
+  //     url: js2Url,
+  //   },
+  //   {
+  //     name: "clase 7",
+  //     description: "Curso completo de HTML, CSS y JS.",
+  //     url: completoUrl,
+  //   },
+  // ];

@@ -30,7 +30,7 @@ const FirstHeading = () => {
         <Carousel className="carrusel" variant="dark">
           {store.classFavorites.map((classFavorite,index) => {
           return (
-            <Carousel.Item className="carousel-I" interval={3000} key={classFavorite.title}>
+            <Carousel.Item className="carousel-I" interval={2000} key={classFavorite.title}>
             <img
               className="foto d-block"
               src={classFavorite.picture}
@@ -39,6 +39,7 @@ const FirstHeading = () => {
               <Carousel.Caption>
               <h5> <span className="classTitle">{classFavorite.title}</span></h5>
               <p><span className="classTitle">{classFavorite.tutor}</span></p>
+              <p><span className="classTitle">{classFavorite.duration}</span></p>
               </Carousel.Caption>
             </Carousel.Item>
             );

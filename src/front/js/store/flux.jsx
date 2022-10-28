@@ -1,6 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, getFirestore, getDocs } from "firebase/firestore";
 
+import html1Url from "../../img/html-1.png";
+import html2Url from "../../img/html-2.png";
+import css1Url from "../../img/css-1.jpg";
+import css2Url from "../../img/css-2.png";
+import js1Url from "../../img/js-1.jpg";
+import js2Url from "../../img/js-2.jpg";
+import completoUrl from "../../img/completo.jpg";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBA8L9H6cbAsiWTuNLJOY7NXSOjObn5djo",
   authDomain: "e-tutor-6dc22.firebaseapp.com",
@@ -26,6 +34,7 @@ const db = getFirestore(app);
 // 	console.error("Error adding document: ", e);
 //   }
 
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -47,6 +56,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
       classFavorites: [],
       tutores: [],
+      clases: [],
+      clasesGeneral: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -102,6 +113,28 @@ const getState = ({ getStore, getActions, setStore }) => {
         );
         // return classFavoritesList;
         setStore({ classFavorites: classFavoritesList });
+      },
+
+      getClass: async () => {
+        const classCol = collection(db, "clases");
+        const classSnapshot = await getDocs(classCol);
+        console.log(classSnapshot);
+        const classList = classSnapshot.docs.map((doc) =>
+          doc.data()
+        );
+        // return classFavoritesList;
+        setStore({ clases: classList });
+      },
+
+      getClassGeneral: async () => {
+        const classGeneralCol = collection(db, "clasesGeneral");
+        const classGeneralSnapshot = await getDocs(classGeneralCol);
+        console.log(classGeneralSnapshot);
+        const classGeneralList = classGeneralSnapshot.docs.map((doc) =>
+          doc.data()
+        );
+        // return classFavoritesList;
+        setStore({ clasesGeneral: classGeneralList });
       },
 
       addUser: async (user) => {
@@ -175,6 +208,33 @@ const getState = ({ getStore, getActions, setStore }) => {
       //   }
       // },
 
+      // addClases: async () => {
+
+      //   try {
+      //     for (let clase of clases){
+      //       const docRef = await addDoc(collection(db, "clases"), clase);
+      //       console.log("Document written with ID: ", docRef.id);
+      //     }
+      //     // const docRef = await addDoc(collection(db, "users"), user);
+      //     // console.log("Document written with ID: ", docRef.id);
+      //   } catch (e) {
+      //     console.error("Error adding document: ", e);
+      //   }
+      // },
+
+      // addClasesGeneral: async () => {
+      //   try {
+      //     for (let claseGeneral of clasesGeneral){
+      //       const docRef = await addDoc(collection(db, "clasesGeneral"), claseGeneral);
+      //       console.log("Document written with ID: ", docRef.id);
+      //     }
+      //     // const docRef = await addDoc(collection(db, "users"), user);
+      //     // console.log("Document written with ID: ", docRef.id);
+      //   } catch (e) {
+      //     console.error("Error adding document: ", e);
+      //   }
+      // },
+
       changeColor: (index, color) => {
         //get the store
         const store = getStore();
@@ -194,3 +254,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
+
+
+  // const clasesGeneral = [
+  //   {
+  //     name: "HTML Basico",
+  //     description: "Curso basico de HTML",
+  //     url: 'https://cdn.windowsreport.com/wp-content/uploads/2019/12/html5-1200x900.jpg',
+  //   },
+  //   {
+  //     name: "JS Basico",
+  //     description:
+  //       "Curso basico de JS. Lo que necesitas saber para dar accion a tu pagina",
+  //     url: 'https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript',
+  //   },
+  //   {
+  //     name: "HTML, CSS y JS",
+  //     description: "Curso completo de HTML, CSS y JS.",
+  //     url: 'https://blog.logrocket.com/wp-content/uploads/2021/06/how-browser-rendering-works.png',
+  //   },
+  //   {
+  //     name: "CSS Avanzado",
+  //     description:
+  //       "Curso CSS avanzado. Aprende todo acerca de los selectores y mucho mas.",
+  //     url: 'https://blog.logrocket.com/wp-content/uploads/2021/04/utility-first-css-frameworks.png',
+  //   },
+  //   {
+  //     name: "HTML Avanzado",
+  //     description: "Curso avanzado de HTML",
+  //     url: 'https://neoghco.github.io/Blog/images/html.png',
+  //   },
+ 
+
+  // ];
