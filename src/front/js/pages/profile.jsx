@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 import { Container, ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +14,10 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/profile.css";
+import { Context } from "../store/appContext";
 
 export function Profile() {
+  const { store, actions } = useContext(Context);
   const [post, setPost] = useState([]);
   const [inputPost, setInputPost] = useState("");
   const [show, setShow] = useState(false);
@@ -34,7 +37,7 @@ export function Profile() {
   };
 
   return (
-    <Container>
+    <Container className="fondo">
       <Row className="rowProfile">
         {/*****************************RECUADRO PERFIL******************************************** */}
         <Col sm={10}>
@@ -43,10 +46,10 @@ export function Profile() {
               className="portada"
               src="https://i.picsum.photos/id/324/1180/300.jpg?hmac=IzsPd2zvvUbzOYRufGgA56ZnVoiw_QnjFSx2rDUItQE"
             ></img>
-            <div>
+            <div className="profileTop">
               <img
                 className="imgperfil"
-                src="https://i.picsum.photos/id/276/100/100.jpg?hmac=UaT7sojlOY8hIbIHpc9DEwjr3VSLkqfFGG-imYhlolw"
+                src="https://muhimu.es/wp-content/uploads/2017/04/FRENTE-NITIDA.jpg"
               ></img>
               <FontAwesomeIcon
                 className="edit"
@@ -153,16 +156,13 @@ export function Profile() {
                 online inicia el 17 de octubre
               </p>
               <div>
-                <Button
-                  className="Button btn btn-success follow"
-                  variant="success"
-                >
+                <Button className="btn btn-success follow" variant="success">
                   Following
                 </Button>
-                <Button className="Button2" variant="success">
+                <Button className="btn btn-success follow" variant="success">
                   Visit Website
                 </Button>
-                <Button className="Button2" variant="success">
+                <Button className="btn btn-success more" variant="success">
                   More
                 </Button>
               </div>
@@ -190,12 +190,21 @@ export function Profile() {
               </p>
               <div>
                 <h4>About me</h4>
+                <p>Empecé a los 18 años y la programación cambió mi vida.</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat in numquam minus, id accusamus quo rem quia, ut atque
-                  mollitia nemo voluptate error esse ipsum cupiditate harum
-                  iste! Ut, nisi?
+                  Aprendí con tutoriales en video, por eso creo en este formato
+                  de enseñanza; el problema es que muchos cursos hablaban con
+                  términos confusos, extraños y no creaban un proyecto real, es
+                  por eso que enseño Creando Proyectos Reales.
                 </p>
+                {/* <p>
+                  Por años he trabajado con WordPress, Drupal, PHP, JavaScript, Laravel, 
+                  Node.js, Express, React, Angular, Vue, Ruby on Rails, Django, React Native, 
+                  Flutter en diferentes empresas de mi Ciudad y para algunos clientes de forma 
+                  Freelancer, pero cuando conocí a Udemy descubrí que podia realizar los cursos 
+                  creando proyectos reales que tanta falta hacian, por lo tanto renuncie a mi 
+                  trabajo y deje mi agencia de diseño Freelancer para comenzar Código Con Juan en Udemy.
+                </p> */}
               </div>
             </Col>
             {/*******************************Cuadro Detalles*************************************** */}
@@ -216,7 +225,40 @@ export function Profile() {
                   <img src="https://i.picsum.photos/id/402/50/50.jpg?hmac=TKqsv4y6IYI-OkMqcmihYayIT8u9SsQa4OO7wRnmW8s"></img>
                   <p className="title">4Geeks Academy Venezuela</p>
                 </div>
-                <div className="postData">
+                <div>
+                  <Carousel
+                    variant="dark"
+                    // nextIcon={<i className="fas fa-chevron-circle-right carouselNext"></i>}
+                  >
+                    {store.clasesGeneral.map((claseG, index) => {
+                      return (
+                        <Carousel.Item interval={3000} key={claseG.name}>
+                          <img
+                            className="foto2 d-block w-100"
+                            // src={'https://cdn.windowsreport.com/wp-content/uploads/2019/12/html5-1200x900.jpg'} ---- HTML
+                            // src={'https://images.ctfassets.net/23aumh6u8s0i/2QjNmyDo6LfK4HC8F1q4qw/b8baddde46d79ec9432a15f14b4a41a2/javascript'} ---- JS
+                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/06/how-browser-rendering-works.png'} --- HTM,CSS,JS
+                            // src={'https://blog.logrocket.com/wp-content/uploads/2021/04/utility-first-css-frameworks.png'} ----CSS
+                            // src={'https://neoghco.github.io/Blog/images/html.png'} --- HTML
+                            src={claseG.url}
+                            alt="First slide"
+                          />
+                          <Carousel.Caption>
+                            <h5>
+                              <span className="classTitle">{claseG.name}</span>
+                            </h5>
+                            <p>
+                              <span className="classTitle">
+                                {claseG.description}
+                              </span>
+                            </p>
+                          </Carousel.Caption>
+                        </Carousel.Item>
+                      );
+                    })}
+                  </Carousel>
+                </div>
+                {/* <div className="postData">
                   <Carousel>
                     <Carousel.Item>
                       <img
@@ -262,7 +304,7 @@ export function Profile() {
                       </Carousel.Caption>
                     </Carousel.Item>
                   </Carousel>
-                </div>
+                </div> */}
               </div>
             </Col>
             {/**********************CUADRO POST******************************************** */}

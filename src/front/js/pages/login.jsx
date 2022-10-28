@@ -11,10 +11,10 @@ export const Login = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <>
-      <div className="background">
+      <div className="backgroundLogin">
+        <h3 className="loginTitle">Login</h3>
         <Col sm={12} className="formData">
-          <Form id="myForm" action="" className="form">
+          <Form id="myForm" action="" className="formLogin">
             <Form.Group as={Row} className="mb-2 p-2 mt-3 rowRegister">
               <Form.Group className="mb-3 info" controlId="formBasicEmail">
                 <Form.Control className="formCasilla" type="email" placeholder="Enter email" required />
@@ -36,6 +36,5 @@ export const Login = () => {
           </div>
         </Col>
       </div>
-    // </>
   );
 };

@@ -50,3 +50,9 @@
   height: 630px;
   background-size: 1300px 630px;
 }
+.cardClass {
+  width: 18rem;
+  height: 200px;
+  border: none;
+  /* margin-left: 5px; */
+}

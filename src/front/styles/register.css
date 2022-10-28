@@ -1,13 +1,24 @@
-.background {
+.backgroundRegister {
   background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Math-Background-for-PPT.jpg);
   opacity: 0.8;
   background-size: 900px 630px;
   height: 630px;
 }
 
-.form {
+.registerTitle{
+  text-align: center;
+  padding-top: 120px;
+  color: black;
+}
+
+/* .data { */
+  /* padding: 10px; */
+/* } */
+
+.formRegister {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .rowRegister {
@@ -29,8 +40,8 @@
   color: white;
 } */
 
-.registerBtn {
-  margin-top: 25px;
+.registerBtn{
+  /* margin-top: 25px; */
   height: 40px;
   width: 120px;
   border-radius: 30px;
@@ -43,10 +54,6 @@
 .registerBtn:hover {
   background-color: #198754;
   color: white;
-}
-
-.data {
-  padding: 10%;
 }
 
 .formCasillaRegister {

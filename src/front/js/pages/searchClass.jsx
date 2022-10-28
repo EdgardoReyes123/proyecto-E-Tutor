@@ -1,105 +1,97 @@
-import React, { useState } from "react";
-import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+import React, { useState, useEffect, useContext } from "react";
+import html1Url from "../../img/html-1.png";
+import html2Url from "../../img/html-2.png";
+import css1Url from "../../img/css-1.jpg";
+import css2Url from "../../img/css-2.png";
+import js1Url from "../../img/js-1.jpg";
+import js2Url from "../../img/js-2.jpg";
+import completoUrl from "../../img/completo.jpg";
+
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import "../../styles/home.css";
+import "../../styles/searchClass.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
-import "../../styles/searchClass.css";
+import { Context } from "../store/appContext";
 
 export const SearchClass = () => {
   const [cardIndex, setCardIndex] = useState(0);
-
-  const clases = [
-    { name: "clase 1" },
-    { name: "clase 2" },
-    { name: "clase 3" },
-    { name: "clase 4" },
-    { name: "clase 5" },
-    { name: "clase 6" },
-    { name: "clase 7" },
-    { name: "clase 8" },
-    { name: "clase 9" },
-    { name: "clase 10" },
-    { name: "clase 11" },
-    { name: "clase 12" },
-    { name: "clase 13" },
-    { name: "clase 14" },
-    { name: "clase 15" },
-    { name: "clase 16" },
-  ];
+  const { store, actions } = useContext(Context);
 
   const handleDirection = (direction) => {
     if (direction == "start") {
-      if (cardIndex + offset > clases.length - 1) {
-        console.log(0);
+      if (cardIndex + offset > store.clases.length - 1) {
+        // console.log(0);
         setCardIndex(0);
       } else {
-        console.log(cardIndex + offset);
+        // console.log(cardIndex + offset);
         setCardIndex(cardIndex + offset);
       }
     }
 
     if (direction == "end") {
       if (cardIndex - offset < 0)
-        setCardIndex(Math.floor((clases.length - 1) / 5) * 5);
+        setCardIndex(Math.floor((store.clases.length - 1) / 5) * 5);
       else setCardIndex(cardIndex - offset);
     }
   };
-  const numberOfSlides = Math.floor(clases.length / 5) + 1;
+  const numberOfSlides = Math.floor(store.clases.length / 5) + 1;
   const slides = [];
   for (let i = 0; i < numberOfSlides; i++) {
     slides.push(i);
   }
   const offset = 5;
-  return (
-    <>
-      <div>
-        <div className="d-flex">
-          <span className="p-2 center-label">
-            <i className="fa fa-star "></i>
-          </span>
-          <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
-        </div>
 
+  return (
+    <div className="fondo">
+      <div className="pt-5">
         <Form
           id="myForm"
           action=""
           className="d-flex justify-content-center form"
         >
           <Form.Control
+            className="keyWord"
             id="palabraClave"
             type="text"
             placeholder="Palabra Clave"
           />
-          <Form.Label column sm={2} className="mb-2 bg-light Fecha">
+          <Form.Label column sm={1} className="Fecha">
             Fecha
           </Form.Label>
-          <Form.Control id="fecha" type="date" />
-          <Form.Select aria-label="Default select example">
+          <Form.Control className="fechaSelect" id="fecha" type="date" />
+          <Form.Select className="tutorSelect" aria-label="Default select example">
             <option>Tutor</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {/* {console.log(store.tutores)}
+            {console.log("HOLAAAAA")} */}
+            {store.tutores.map((tutor, index) => {
+              return (
+                <option key={index} value={index}>
+                  {tutor.name.first + " " + tutor.name.last}
+                </option>
+              );
+            })}
           </Form.Select>
         </Form>
 
         <div className="d-flex justify-content-center">
           <button
-            className="Button btn btn-success p-2 m-2"
+            className="btn btn-success buscarButton"
             form="myForm"
             type="submit"
+            style={{ marginTop: "25px" }}
           >
             Buscar
           </button>
         </div>
       </div>
       <div>
+        <hr className="mb-2" />
         <Carousel
           variant="dark"
+          style={{ backgroundColor: "white" }}
           nextIcon={
             <i className="fas fa-chevron-circle-right carouselNext"></i>
           }
@@ -112,23 +104,37 @@ export const SearchClass = () => {
             return (
               <Carousel.Item key={slide}>
                 <div className="d-flex">
-                  {clases
+                  {store.clases
                     .filter(
-                      (planet, index) =>
+                      (clase, index) =>
                         index >= cardIndex && index < cardIndex + offset
                     )
-                    .map((planet, index) => {
+                    .map((clase, index) => {
                       return (
-                        <Card key={planet.name} style={{ width: "18rem" }}>
-                          <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card key={clase.name} className="cardClass text-center">
+                          <Card.Img
+                            variant="top"
+                            src={clase.url}
+                            style={{
+                              objectFit: "contain",
+                              // borderRadius: 55,
+                              // width: "50vw",
+                              paddingTop: "2px",
+                              height: "100px",
+                              // border: "1px solid red",
+                            }}
+                          />
                           <Card.Body>
-                            <Card.Title>{planet.name}</Card.Title>
-                            <Card.Text>
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
+                            <Card.Title>{clase.name}</Card.Title>
+                            <Card.Text
+                              style={{
+                                height: "100px",
+                              }}
+                            >
+                              {clase.description}
                             </Card.Text>
                             <Button className="Button5" variant="success">
-                              Go somewhere
+                              Ver
                             </Button>
                           </Card.Body>
                         </Card>
@@ -140,6 +146,71 @@ export const SearchClass = () => {
           })}
         </Carousel>
       </div>
-    </>
+    </div>
   );
 };
+
+
+
+  // const getToDo = async () => {
+  //   let response = await fetch("https://swapi.dev/api/people", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "GET",
+  //   });
+  //   let data = await response.json();
+  //   console.log(data.results);
+  //   return data.results;
+  // };
+  // const tutores = getTodo();
+  // console.log(tutores);
+
+
+          {/* <div className="d-flex">
+          <span className="p-2 center-label">
+            <i className="fa fa-star "></i>
+          </span>
+          <h1 className="p-2 flex-grow-1">Clases disponibles</h1>
+        </div> */}
+
+
+  // const clases = [
+  //   {
+  //     name: "clase 1",
+  //     description: "Curso basico de HTML",
+  //     url: html1Url,
+  //   },
+  //   {
+  //     name: "clase 2",
+  //     description: "Curso avanzado de HTML",
+  //     url: html2Url,
+  //   },
+  //   {
+  //     name: "clase 3",
+  //     description: "Curso basico de CSS. Aprende a dar estilo a tus paginas.",
+  //     url: css1Url,
+  //   },
+  //   {
+  //     name: "clase 4",
+  //     description:
+  //       "Curso CSS avanzado. Aprende todo acerca de los selectores y mucho mas.",
+  //     url: css2Url,
+  //   },
+  //   {
+  //     name: "clase 5",
+  //     description:
+  //       "Curso basico de JS. Lo que necesitas saber para dar accion a tu pagina",
+  //     url: js1Url,
+  //   },
+  //   {
+  //     name: "clase 6",
+  //     description: "Curso de JS avanzado",
+  //     url: js2Url,
+  //   },
+  //   {
+  //     name: "clase 7",
+  //     description: "Curso completo de HTML, CSS y JS.",
+  //     url: completoUrl,
+  //   },
+  // ];

@@ -29,9 +29,16 @@ const injectContext = (PassedComponent) => {
        * store, instead use actions, like this:
        **/
       // state.actions.getMessage(); // <---- calling this function from the flux.js actions
+      state.actions.getClassFavorites();
       state.actions.getUsers();
       state.actions.getPlanets();
       state.actions.getPeople();
+      state.actions.getTutores();
+      state.actions.getClass();
+      state.actions.getClassGeneral();
+      // state.actions.addClasesGeneral();
+      // state.actions.addClases();
+      // state.actions.addTutores();
     }, []);
 
     // The initial value for the context is not null anymore, but the current state of this component,

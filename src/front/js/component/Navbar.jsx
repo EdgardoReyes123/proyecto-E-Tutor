@@ -9,14 +9,14 @@ export const NavbarP= () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand className="brandLogo" href="#home"><i className="fas fa-book brandLogo"></i> E-Tutor</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
-            <Nav.Link href="/SearchClass">SearchClass</Nav.Link>
-            <Nav.Link href="/ScheduleClass">ScheduleClass</Nav.Link>
+            <Nav.Link href="/SearchClass">Search Class</Nav.Link>
+            <Nav.Link href="/ScheduleClass">Schedule Class</Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title="Register / Login" id="collasible-nav-dropdown">
