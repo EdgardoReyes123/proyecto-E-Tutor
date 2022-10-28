@@ -2,38 +2,19 @@
   background-color: #f3f2ef;
 } */
 
-.Button {
-  border-color: #198754;
-  border-radius: 25px;
+.follow{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
   font-size: 15px;
-  color: #198754;
-  width: 100px;
-  text-align: center;
-  background-color: white;
-  padding: 5px;
-  margin: 5px;
 }
 
-.Button:hover {
-  background-color: #198754;
-  color: white;
-}
-
-.Button2 {
-  border-color: #77aaff;
-  border-radius: 25px;
+.more{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
   font-size: 15px;
-  color: #77aaff;
   width: 100px;
-  text-align: center;
-  background-color: white;
-  padding: 5px;
-  margin: 5px;
-}
-
-.Button2:hover {
-  background-color: #77aaff;
-  color: white;
 }
 
 .rowProfile {
@@ -53,9 +34,15 @@
   height: auto;
 }
 
+.profileTop{
+  height: 90px;
+}
+
 .imgperfil {
   padding-left: 20px;
   transform: translateY(-50%);
+  width: 140px;
+  height: 120px;
 }
 
 .dataProfile {
@@ -106,6 +93,7 @@
   background-color: white;
   border-radius: 25px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* width: 279px; */
 }
 
 .edit {
